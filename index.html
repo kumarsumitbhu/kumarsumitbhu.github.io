@@ -13,8 +13,8 @@
 :root{
   --page:#F3F0E7;
   --card:#FCF8EA;
-  --tray:#D6CBB0;
-  --tray-edge:#8F8467;
+  --tray:#EAE4D3;
+  --tray-edge:#D9D3C3;
   --ink:#1D1B17;
   --soft:#5B574C;
   --red:#B3372B;          /* catalogue red: the one accent colour */
@@ -56,11 +56,10 @@ nav{position:sticky; top:0; z-index:50; background:var(--page); border-bottom:1p
 .hero{padding-top:72px; padding-bottom:80px;}
 .hero-grid{display:grid; grid-template-columns:1.25fr .75fr; gap:72px; align-items:end;}
 .kicker{font-family:var(--type); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin:0 0 18px; max-width:none;}
-h1.name{font-size:clamp(3.4rem,8.6vw,6.4rem); font-weight:500; line-height:.94; letter-spacing:-.022em; margin-bottom:22px;}
+h1.name{font-size:clamp(3rem,6vw,5.2rem); font-weight:500; line-height:.96; letter-spacing:-.02em; margin-bottom:24px;}
 .role{font-family:var(--type); font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 26px; max-width:none;}
 .statement{font-size:1.2rem; color:var(--ink); max-width:50ch; margin-bottom:26px;}
-.seeking{display:flex; align-items:center; gap:12px; font-family:var(--type); font-size:14px; color:var(--ink); margin:0 0 24px; max-width:none;}
-.seeking::before{content:""; flex:none; width:10px; height:10px; background:var(--red);}
+.seeking{font-family:var(--type); font-size:13.5px; letter-spacing:.02em; color:var(--soft); margin:0 0 24px; max-width:none;}
 .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px;}
 .btn{display:inline-block; font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; line-height:1.2; padding:14px 22px; border:1.5px solid var(--ink); text-decoration:none;}
 .btn-primary{background:var(--ink); color:var(--card);}
@@ -71,6 +70,16 @@ h1.name{font-size:clamp(3.4rem,8.6vw,6.4rem); font-weight:500; line-height:.94; 
 .portrait{margin:0; background:var(--card); padding:10px; border:1px solid var(--hair); box-shadow:0 14px 26px -18px rgba(29,27,23,.55);}
 .portrait img{width:100%; aspect-ratio:4/4.6; object-fit:cover; object-position:center 12%;}
 .portrait figcaption{font-family:var(--type); font-size:12px; letter-spacing:.04em; color:var(--soft); padding:10px 2px 2px;}
+
+/* ---------- Research index: the site's own catalogue, right under the hero ---------- */
+.rindex{border-top:1px solid var(--ink); border-bottom:1px solid var(--ink);}
+.rindex-inner{display:grid; grid-template-columns:repeat(3,1fr);}
+.rindex a{display:block; padding:22px 28px; text-decoration:none; border-left:1px solid var(--hair);}
+.rindex a:first-child{border-left:none;}
+.rindex a:hover{background:rgba(179,55,43,.05);}
+.rindex .no{display:block; font-family:var(--type); font-size:12px; letter-spacing:.08em; color:var(--red); margin-bottom:6px;}
+.rindex .lbl{display:block; font-family:var(--type); font-weight:700; font-size:14.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--ink); margin-bottom:5px;}
+.rindex .sub{display:block; font-family:var(--type); font-size:12px; color:var(--soft); letter-spacing:.01em;}
 
 /* ---------- Sections: label in the left margin, content on the right ---------- */
 section{padding:72px 0;}
@@ -89,19 +98,20 @@ section{padding:72px 0;}
 .focus-item p{font-size:.98rem; margin:0;}
 
 /* ---------- Publications: the card drawer ---------- */
+.pub-kicker{font-family:var(--type); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); max-width:none; margin:2px 0 10px;}
 .pub-note{font-family:var(--type); font-size:13.5px; color:var(--soft); max-width:none; margin-bottom:22px;}
 .tabs-row{display:none;}
 .js .tabs-row{display:flex; flex-wrap:wrap; gap:4px; align-items:flex-end; padding-left:14px; position:relative; z-index:1;}
-.tab{position:relative; top:1px; font-family:var(--type); font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); background:#E9E1C8; border:1px solid var(--tray-edge); border-bottom:none; border-radius:7px 7px 0 0; padding:9px 15px 8px; cursor:pointer;}
-.tab:hover{background:#F0E9D3;}
+.tab{position:relative; top:1px; font-family:var(--type); font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); background:#F3EFE1; border:1px solid var(--tray-edge); border-bottom:none; border-radius:7px 7px 0 0; padding:9px 15px 8px; cursor:pointer;}
+.tab:hover{background:#FAF7EC;}
 .tab .n{color:var(--red); font-weight:700; margin-left:6px;}
 .tab[aria-pressed="true"]{background:var(--tray); font-weight:700; padding-bottom:11px; z-index:2;}
-.drawer{background:var(--tray); border:1px solid var(--tray-edge); padding:34px 24px; display:flex; flex-direction:column; align-items:center; gap:28px; box-shadow:inset 0 3px 8px rgba(0,0,0,.16);}
+.drawer{background:var(--tray); border:1px solid var(--tray-edge); padding:34px 24px 34px 0; display:flex; flex-direction:column; align-items:center; gap:28px;}
 
 /* The card: 125 x 75 mm (5:3). On screen 1.4x that; in print exactly 125 x 75 mm. */
 .card-wrap{container-type:inline-size; width:min(100%,175mm);}
 .card-wrap[hidden]{display:none;}
-.card{position:relative; aspect-ratio:5/3; --lh:1.5; font-size:15px; font-size:max(2.232cqw,10.4px); line-height:var(--lh); color:var(--ink);
+.card{position:relative; aspect-ratio:5/3; font-family:var(--type); --lh:1.5; font-size:15px; font-size:max(2.232cqw,10.4px); line-height:var(--lh); color:var(--ink);
   background:var(--card); border:1px solid rgba(29,27,23,.18); border-radius:.5em;
   box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 7px 14px -9px rgba(29,27,23,.55); font-variant-ligatures:none;
   transition:transform .15s ease, box-shadow .15s ease;}
@@ -188,6 +198,9 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
   .focus-grid{grid-template-columns:1fr;}
   .proj{grid-template-columns:1fr;}
   .proj-dl{grid-template-columns:1fr;}
+  .rindex-inner{grid-template-columns:1fr;}
+  .rindex a{border-left:none; border-top:1px solid var(--hair);}
+  .rindex a:first-child{border-top:none;}
 }
 @media (max-width:860px){
   .tabs{position:absolute; top:64px; left:0; right:0; background:var(--page); flex-direction:column; align-items:stretch; gap:0; border-bottom:1px solid var(--ink); display:none;}
@@ -202,7 +215,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
   .wrap,.nav-inner{padding-left:20px; padding-right:20px;}
   .tabs a{padding-left:20px; padding-right:20px;}
   section{padding:56px 0;}
-  .drawer{padding:22px 8px;}
+  .drawer{padding:22px 8px 22px 0;}
   .js .tabs-row{padding-left:0; gap:6px; margin-bottom:12px;}
   .tab{top:0; border:1px solid var(--tray-edge); border-radius:5px; padding:8px 12px;}
   .tab[aria-pressed="true"]{padding-bottom:8px;}
@@ -260,7 +273,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
         scholarly and cultural knowledge, with particular interests in semantic search, multilingual
         information access, and scholarly communication.
       </p>
-      <p class="seeking">Seeking visiting-researcher opportunities</p>
+      <p class="seeking">Open for research visits and collaborations</p>
       <div class="cta-row">
         <a href="#research-visit" class="btn btn-primary">Research visit</a>
         <a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
@@ -280,6 +293,26 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
   </div>
 </div>
 
+<nav class="rindex" aria-label="Research index">
+  <div class="wrap rindex-inner">
+    <a href="#idx-retrieval">
+      <span class="no">01</span>
+      <span class="lbl">Semantic retrieval</span>
+      <span class="sub">retrieval &middot; embeddings &middot; RAG &middot; evaluation</span>
+    </a>
+    <a href="#idx-knowledge">
+      <span class="no">02</span>
+      <span class="lbl">Knowledge organization</span>
+      <span class="sub">ontologies &middot; knowledge graphs &middot; multilingual access</span>
+    </a>
+    <a href="#idx-scholarly">
+      <span class="no">03</span>
+      <span class="lbl">Scholarly communication</span>
+      <span class="sub">bibliometrics &middot; scientometrics &middot; citation analysis</span>
+    </a>
+  </div>
+</nav>
+
 <div class="wrap">
 
 <section id="research" class="split">
@@ -295,15 +328,15 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
     literature.
   </p>
   <div class="focus-grid">
-    <div class="focus-item">
+    <div class="focus-item" id="idx-retrieval">
       <h3>Semantic &amp; AI-based retrieval</h3>
       <p>Semantic search, embeddings, retrieval-augmented generation, and retrieval evaluation.</p>
     </div>
-    <div class="focus-item">
+    <div class="focus-item" id="idx-knowledge">
       <h3>Knowledge organization</h3>
       <p>Ontologies, knowledge graphs, multilingual and Indigenous information access.</p>
     </div>
-    <div class="focus-item">
+    <div class="focus-item" id="idx-scholarly">
       <h3>Scholarly communication</h3>
       <p>Bibliometrics, scientometrics, citation analysis, and research evaluation.</p>
     </div>
@@ -311,7 +344,8 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
 </section>
 
 <section id="publications" class="split">
-  <h2>Selected publications</h2>
+  <h2>Research outputs</h2>
+  <p class="pub-kicker">Research Index · KS-2026</p>
   <p class="pub-note"><span id="pub-total">13</span> records, each set as a standard catalogue card (125 × 75 mm). Click a card to open the paper. Print this page to get the cards at true size (A4 landscape).</p>
 
   <div class="tabs-row" role="group" aria-label="Filter publications">
@@ -319,7 +353,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
     <button type="button" class="tab" data-kind="article" aria-pressed="false">Articles<span class="n">3</span></button>
     <button type="button" class="tab" data-kind="proceedings" aria-pressed="false">Proceedings<span class="n">3</span></button>
     <button type="button" class="tab" data-kind="preprint" aria-pressed="false">Preprints<span class="n">1</span></button>
-    <button type="button" class="tab" data-kind="accepted" aria-pressed="false">Accepted<span class="n">6</span></button>
+    <button type="button" class="tab" data-kind="accepted" aria-pressed="false">Accepted presentations<span class="n">6</span></button>
   </div>
   <p class="sr-only" id="pub-count" aria-live="polite"></p>
 
