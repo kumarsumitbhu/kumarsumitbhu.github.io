@@ -5,205 +5,226 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kumar Sumit — AI, Semantic Retrieval &amp; Knowledge Organization Researcher</title>
 <meta name="description" content="Kumar Sumit — PhD researcher, Mizoram University. Computational approaches to semantic retrieval, knowledge organization, multilingual information access, and scholarly communication. Seeking visiting-researcher collaborations.">
+<script>document.documentElement.className='js';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#FAFAF7;
-  --ink:#101418;
-  --ink-soft:#4A525A;
-  --accent:#2A3BFF;   /* change this one value to re-colour the whole site */
-  --hair:#D8D9D3;
-  --maxw:1160px;
-  --sans:'Archivo','Helvetica Neue',Arial,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --page:#F3F0E7;
+  --card:#FCF8EA;
+  --tray:#D6CBB0;
+  --tray-edge:#8F8467;
+  --ink:#1D1B17;
+  --soft:#5B574C;
+  --red:#B3372B;          /* catalogue red: the one accent colour */
+  --rule-blue:#BBCBE0;
+  --hair:#D9D3C3;
+  --maxw:1120px;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --type:'Courier Prime','Courier New',Courier,monospace;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 [id]{scroll-margin-top:84px;}
-body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16.5px; line-height:1.62; -webkit-font-smoothing:antialiased;}
-h1,h2,h3{margin:0; font-weight:700; line-height:1.15;}
-a{color:var(--accent); text-decoration:none;}
-a:hover{text-decoration:underline; text-underline-offset:3px;}
-:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+body{margin:0; background:var(--page); color:var(--ink); font-family:var(--serif); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+h1,h2,h3{margin:0; font-weight:600; line-height:1.15;}
+a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--red); text-decoration-thickness:1px; text-underline-offset:.2em;}
+a:hover{text-decoration-thickness:2px;}
+:focus-visible{outline:2px solid var(--red); outline-offset:3px;}
 img{max-width:100%; display:block;}
-p{margin:0 0 16px; max-width:64ch; color:var(--ink-soft);}
+p{margin:0 0 16px; max-width:64ch; color:var(--soft);}
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
-.skip{position:absolute; left:-9999px; top:8px; z-index:100; background:var(--ink); color:#fff; padding:10px 14px; font-family:var(--mono); font-size:13px;}
+.skip{position:absolute; left:-9999px; top:8px; z-index:100; background:var(--ink); color:#fff; padding:10px 14px; font-family:var(--type); font-size:13px;}
 .skip:focus{left:8px;}
+.sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
 
 /* ---------- Nav ---------- */
-nav{position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--ink);}
+nav{position:sticky; top:0; z-index:50; background:var(--page); border-bottom:1px solid var(--hair);}
 .nav-inner{max-width:var(--maxw); margin:0 auto; padding:0 32px; display:flex; align-items:center; justify-content:space-between; height:64px;}
-.nav-name{display:flex; align-items:center; gap:10px; font-size:18px; font-weight:700; letter-spacing:.01em; color:var(--ink);}
-.nav-name::before{content:""; width:10px; height:10px; background:var(--accent);}
-.nav-name:hover{text-decoration:none; color:var(--ink);}
-.tabs{display:flex; align-items:center; gap:26px; list-style:none; margin:0; padding:0;}
-.tabs a{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink);}
-.tabs a:hover{color:var(--accent); text-decoration:none;}
-.tabs .pill{background:var(--accent); color:#fff; padding:9px 14px;}
-.tabs .pill:hover{background:var(--ink); color:#fff;}
+.nav-name{font-size:21px; font-weight:600; letter-spacing:.005em; text-decoration:none;}
+.tabs{display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0;}
+.tabs a{font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; padding:6px 0; border-bottom:2px solid transparent;}
+.tabs a:hover{border-bottom-color:var(--red);}
+.tabs .cta{border-bottom-color:var(--red);}
 #nav-toggle{position:absolute; opacity:0; pointer-events:none;}
-.burger{display:none; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; border:1px solid var(--ink); padding:8px 12px; cursor:pointer;}
-#nav-toggle:focus-visible ~ .burger{outline:2px solid var(--accent); outline-offset:3px;}
+.burger{display:none; font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--ink); padding:8px 12px; cursor:pointer;}
+#nav-toggle:focus-visible ~ .burger{outline:2px solid var(--red); outline-offset:3px;}
 
 /* ---------- Hero ---------- */
-.hero{padding-top:64px; padding-bottom:72px;}
-.hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:64px; align-items:start;}
-h1.name{font-size:clamp(3rem,8vw,5.6rem); font-stretch:78%; font-weight:800; line-height:.95; letter-spacing:-.025em; margin-bottom:18px;}
-.role{font-family:var(--mono); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin:0 0 26px; max-width:none;}
-.statement{font-size:1.12rem; color:var(--ink); max-width:54ch; margin-bottom:28px;}
-.record{margin:0 0 30px; border-top:1px solid var(--ink); max-width:560px;}
-.record div{display:grid; grid-template-columns:104px 1fr; gap:16px; padding:9px 0; border-bottom:1px solid var(--hair);}
-.record dt{font-family:var(--mono); font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-soft); padding-top:3px;}
-.record dd{margin:0; font-size:.98rem; color:var(--ink);}
+.hero{padding-top:72px; padding-bottom:80px;}
+.hero-grid{display:grid; grid-template-columns:1.25fr .75fr; gap:72px; align-items:end;}
+.kicker{font-family:var(--type); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin:0 0 18px; max-width:none;}
+h1.name{font-size:clamp(3.4rem,8.6vw,6.4rem); font-weight:500; line-height:.94; letter-spacing:-.022em; margin-bottom:22px;}
+.role{font-family:var(--type); font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 26px; max-width:none;}
+.statement{font-size:1.2rem; color:var(--ink); max-width:50ch; margin-bottom:26px;}
+.seeking{display:flex; align-items:center; gap:12px; font-family:var(--type); font-size:14px; color:var(--ink); margin:0 0 24px; max-width:none;}
+.seeking::before{content:""; flex:none; width:10px; height:10px; background:var(--red);}
 .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px;}
-.btn{display:inline-block; font-size:15px; font-weight:600; line-height:1.2; padding:13px 22px; border:1.5px solid var(--ink);}
-.btn:hover{text-decoration:none;}
-.btn-primary{background:var(--accent); border-color:var(--accent); color:#fff;}
-.btn-primary:hover{background:var(--ink); border-color:var(--ink); color:#fff;}
+.btn{display:inline-block; font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; line-height:1.2; padding:14px 22px; border:1.5px solid var(--ink); text-decoration:none;}
+.btn-primary{background:var(--ink); color:var(--card);}
+.btn-primary:hover{background:var(--red); border-color:var(--red); text-decoration:none;}
 .btn-outline{background:transparent; color:var(--ink);}
-.btn-outline:hover{background:var(--ink); color:#fff;}
-.link-row{display:flex; flex-wrap:wrap; gap:8px 20px; font-family:var(--mono); font-size:12.5px; letter-spacing:.04em;}
-.link-row a{color:var(--ink); border-bottom:1px solid var(--hair);}
-.link-row a:hover{color:var(--accent); border-color:var(--accent); text-decoration:none;}
-.plate{margin:0; background:#fff; border:1px solid var(--ink); padding:10px;}
-.plate img{width:100%; aspect-ratio:4/4.6; object-fit:cover; object-position:center 12%;}
-.plate figcaption{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); padding:10px 2px 2px;}
+.btn-outline:hover{background:var(--ink); color:var(--card); text-decoration:none;}
+.link-row{display:flex; flex-wrap:wrap; gap:8px 22px; font-family:var(--type); font-size:13.5px;}
+.portrait{margin:0; background:var(--card); padding:10px; border:1px solid var(--hair); box-shadow:0 14px 26px -18px rgba(29,27,23,.55);}
+.portrait img{width:100%; aspect-ratio:4/4.6; object-fit:cover; object-position:center 12%;}
+.portrait figcaption{font-family:var(--type); font-size:12px; letter-spacing:.04em; color:var(--soft); padding:10px 2px 2px;}
 
-/* ---------- Seeking banner ---------- */
-.seek-banner{background:var(--accent); color:#fff;}
-.seek-banner .wrap{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px 24px; padding-top:15px; padding-bottom:15px;}
-.seek-banner p{margin:0; max-width:none; color:#fff; font-size:15px;}
-.seek-banner a{color:#fff; font-family:var(--mono); font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; border-bottom:1px solid rgba(255,255,255,.7);}
-.seek-banner a:hover{border-color:#fff; text-decoration:none;}
-
-/* ---------- Stats strip ---------- */
-.strip{border-bottom:1px solid var(--ink);}
-.stat-row{display:grid; grid-template-columns:repeat(4,1fr);}
-.stat{padding:26px 24px; border-left:1px solid var(--hair);}
-.stat:first-child{border-left:none; padding-left:0;}
-.stat-num{font-size:2.9rem; font-weight:700; font-stretch:82%; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums;}
-.stat-num .ord{font-size:1.3rem; font-stretch:100%; letter-spacing:0; margin-left:2px;}
-.stat-label{color:var(--ink-soft); font-size:.9rem; margin-top:8px;}
-
-/* ---------- Sections (label in the left margin, content on the right) ---------- */
-section{padding:64px 0;}
+/* ---------- Sections: label in the left margin, content on the right ---------- */
+section{padding:72px 0;}
 .wrap > section + section{border-top:1px solid var(--ink);}
 .split{display:grid; grid-template-columns:190px minmax(0,1fr); column-gap:56px;}
 .split > h2{grid-column:1; grid-row:1 / span 40; align-self:start; position:sticky; top:96px;
-  font-family:var(--mono); font-size:12.5px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; line-height:1.4;}
-.split > h2::before{content:""; display:block; width:32px; height:3px; background:var(--accent); margin-bottom:12px;}
+  font-family:var(--type); font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; line-height:1.45;}
+.split > h2::before{content:""; display:block; width:32px; height:3px; background:var(--red); margin-bottom:12px;}
 .split > *:not(h2){grid-column:2;}
-.lede{max-width:66ch; font-size:1.08rem; color:var(--ink);}
-.subhead{margin:52px 0 20px; font-size:1.35rem;}
+.lede{max-width:62ch; font-size:1.18rem; color:var(--ink);}
+.subhead{margin:56px 0 20px; font-size:1.5rem;}
 
-/* Focus areas */
-.focus-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:34px;}
-.focus-item{border-top:2px solid var(--ink); padding-top:14px;}
-.focus-item h3{font-size:1.1rem; margin-bottom:6px;}
-.focus-item p{font-size:.94rem; margin:0;}
+.focus-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:36px;}
+.focus-item{border-top:1px solid var(--ink); padding-top:14px;}
+.focus-item h3{font-size:1.2rem; margin-bottom:6px;}
+.focus-item p{font-size:.98rem; margin:0;}
 
-/* Tags */
-.tag-row{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;}
-.tag{font-family:var(--mono); font-size:12px; color:var(--ink); background:#fff; border:1px solid #B9BBB3; padding:3px 9px;}
+/* ---------- Publications: the card drawer ---------- */
+.pub-note{font-family:var(--type); font-size:13.5px; color:var(--soft); max-width:none; margin-bottom:22px;}
+.tabs-row{display:none;}
+.js .tabs-row{display:flex; flex-wrap:wrap; gap:4px; align-items:flex-end; padding-left:14px; position:relative; z-index:1;}
+.tab{position:relative; top:1px; font-family:var(--type); font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); background:#E9E1C8; border:1px solid var(--tray-edge); border-bottom:none; border-radius:7px 7px 0 0; padding:9px 15px 8px; cursor:pointer;}
+.tab:hover{background:#F0E9D3;}
+.tab .n{color:var(--red); font-weight:700; margin-left:6px;}
+.tab[aria-pressed="true"]{background:var(--tray); font-weight:700; padding-bottom:11px; z-index:2;}
+.drawer{background:var(--tray); border:1px solid var(--tray-edge); padding:34px 24px; display:flex; flex-direction:column; align-items:center; gap:28px; box-shadow:inset 0 3px 8px rgba(0,0,0,.16);}
 
-/* Publications */
-.pub-featured{display:grid; grid-template-columns:120px minmax(0,1fr); column-gap:24px; border-top:2px solid var(--ink); padding:18px 0 22px;}
-.pub-badge{grid-column:1; grid-row:1 / span 2; font-family:var(--mono); font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); padding-top:5px;}
-.pub-featured h3{grid-column:2; font-size:1.12rem; font-weight:600; margin-bottom:6px;}
-.pub-featured .pub-meta{grid-column:2; color:var(--ink-soft); font-size:.92rem;}
-.pub-group{margin-top:44px;}
-.pub-group-title{font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; padding-bottom:10px; border-bottom:1px solid var(--ink);}
-.pub-row{display:grid; grid-template-columns:64px minmax(0,1fr); gap:16px; padding:15px 0; border-bottom:1px solid var(--hair);}
-.pub-year{font-family:var(--mono); font-size:13px; color:var(--ink-soft); padding-top:2px;}
-.pub-row-title{font-weight:600; margin-bottom:3px;}
-.pub-row-meta{color:var(--ink-soft); font-size:.9rem;}
-.pub-row-title a,.pub-featured h3 a{color:var(--ink); background:linear-gradient(var(--accent),var(--accent)) 0 100%/100% 2px no-repeat; transition:background-size .15s,color .15s;}
-.pub-row-title a:hover,.pub-featured h3 a:hover{background-size:100% 100%; color:#fff; text-decoration:none;}
+/* The card: 125 x 75 mm (5:3). On screen 1.4x that; in print exactly 125 x 75 mm. */
+.card-wrap{container-type:inline-size; width:min(100%,175mm);}
+.card-wrap[hidden]{display:none;}
+.card{position:relative; aspect-ratio:5/3; --lh:1.5; font-size:15px; font-size:max(2.232cqw,10.4px); line-height:var(--lh); color:var(--ink);
+  background:var(--card); border:1px solid rgba(29,27,23,.18); border-radius:.5em;
+  box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 7px 14px -9px rgba(29,27,23,.55); font-variant-ligatures:none;
+  transition:transform .15s ease, box-shadow .15s ease;}
+.card.linked, .card.linked .card-body{cursor:pointer;}
+.card:hover{transform:translateY(-3px); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 12px 20px -10px rgba(29,27,23,.6);}
+@media (prefers-reduced-motion:reduce){.card{transition:none;} .card:hover{transform:none;}}
+.card::before{content:""; position:absolute; left:0; right:0; top:3.4em; bottom:0; border-radius:0 0 .5em .5em;
+  background:linear-gradient(var(--red),var(--red)) 0 0 / 100% .11em no-repeat,
+             repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--lh)*1em - 1px), var(--rule-blue) calc(var(--lh)*1em - 1px), var(--rule-blue) calc(var(--lh)*1em));
+  background-position:0 0, 0 .1em; opacity:.85; pointer-events:none;}
+.card::after{content:""; position:absolute; left:50%; bottom:7.5cqw; width:5cqw; height:5cqw; margin-left:-2.5cqw; border-radius:50%;
+  background:var(--tray); box-shadow:inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.4);}
+.card-top{position:absolute; left:2.4em; right:2.4em; top:.75em; height:2.4em;}
+.acc{font-weight:700; letter-spacing:.05em;}
+.stamp{position:absolute; right:0; top:-.1em; transform:rotate(-5deg); font-weight:700; letter-spacing:.14em; font-size:.92em; line-height:1.3;
+  color:var(--red); border:.16em solid currentColor; border-radius:.2em; padding:.05em .55em .05em .7em; opacity:.88; mix-blend-mode:multiply;}
+.card-body{position:absolute; left:2.4em; right:2.4em; top:3.5em; bottom:13cqw; overflow:hidden;}
+.card-body p{margin:0; max-width:none; color:var(--ink);}
+.card-body a{text-decoration-color:var(--red);}
+.entry{margin-left:.8em;}
+.desc,.note,.tracings{margin-left:.8em; text-indent:3ch;}
+.note{color:var(--soft);}
+.tracings{color:var(--soft);}
+.brief{display:none;}
+/* Small cards (phones): compact record so nothing is clipped. Same 5:3 shape, same fields, optional detail dropped. */
+@container (max-width:470px){
+  .card{--lh:1.4;}
+  .tracings,.opt,.full{display:none;}
+  .brief{display:inline;}
+}
+@container (max-width:300px){
+  .card{font-size:9.2px;}
+}
 
-/* Projects */
-.proj-grid{display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--ink); border-left:1px solid var(--ink); margin-top:24px;}
-.proj{display:flex; flex-direction:column; padding:24px; background:#fff; border-right:1px solid var(--ink); border-bottom:1px solid var(--ink);}
-.proj-name{font-family:var(--mono); font-weight:600; font-size:1rem; margin-bottom:14px;}
-.proj-row{font-size:.9rem; margin-bottom:10px; color:var(--ink-soft);}
-.proj-row strong{display:block; font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink); margin-bottom:2px;}
-.proj > a{margin-top:auto; padding-top:8px; font-family:var(--mono); font-size:12.5px; letter-spacing:.04em;}
-.proj > a::after{content:" \2192";}
+/* ---------- Projects: quiet ruled list ---------- */
+.proj-list{margin-top:8px;}
+.proj{display:grid; grid-template-columns:210px minmax(0,1fr) auto; gap:8px 28px; padding:22px 0; border-top:1px solid var(--hair); align-items:start;}
+.proj:first-child{border-top-color:var(--ink);}
+.proj-name{font-family:var(--type); font-weight:700; font-size:16px;}
+.proj-dl{display:grid; grid-template-columns:repeat(3,1fr); gap:6px 22px; margin:0;}
+.proj-dl dt{font-family:var(--type); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--red);}
+.proj-dl dd{margin:0; font-size:.95rem; line-height:1.45; color:var(--soft);}
+.proj-link{font-family:var(--type); font-size:13.5px; white-space:nowrap;}
 
-/* Research visit */
-.area{padding:28px 0; border-top:1px solid var(--hair);}
-.area:first-of-type{border-top:none; padding-top:0;}
-.area h3{font-size:1.25rem; margin-bottom:6px;}
-.contrib-grid{display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--ink); border-left:1px solid var(--ink);}
-.contrib{padding:22px 24px; background:#fff; border-right:1px solid var(--ink); border-bottom:1px solid var(--ink);}
-.contrib h3{font-size:1.02rem; margin-bottom:6px;}
-.contrib p{margin:0; font-size:.94rem;}
+/* ---------- Research visit ---------- */
+.area{padding:26px 0; border-top:1px solid var(--hair);}
+.area:first-of-type{border-top:none; padding-top:6px;}
+.lede + .area{margin-top:26px;}
+.area h3{font-size:1.35rem; margin-bottom:6px;}
+.topics{font-family:var(--type); font-size:13.5px; color:var(--soft); max-width:none; margin:10px 0 0;}
+.contrib-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px 40px;}
+.contrib{border-top:1px solid var(--ink); padding-top:12px;}
+.contrib h3{font-size:1.1rem; margin-bottom:4px;}
+.contrib p{margin:0; font-size:.98rem;}
 .concept{padding:22px 0; border-top:1px solid var(--hair);}
-p + .concept{border-top:none; padding-top:0;}
-.concept-tag{display:inline-block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); border:1px solid var(--accent); padding:2px 8px; margin-bottom:10px;}
-.concept h3{font-size:1.1rem; margin-bottom:6px;}
-.concept p{margin:0; font-size:.95rem;}
+.concept-tag{display:block; font-family:var(--type); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin-bottom:6px;}
+.concept h3{font-size:1.2rem; margin-bottom:4px;}
+.concept p{margin:0; font-size:1rem;}
 
-/* Education / recognition */
-.edu-item{display:grid; grid-template-columns:160px minmax(0,1fr); gap:20px; padding:16px 0; border-top:1px solid var(--hair);}
+/* ---------- Education / recognition ---------- */
+.edu-item{display:grid; grid-template-columns:170px minmax(0,1fr); gap:20px; padding:16px 0; border-top:1px solid var(--hair);}
 h2 + .edu-item{border-top-color:var(--ink);}
-.edu-date{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); padding-top:3px;}
-.edu-title{font-weight:600; margin-bottom:2px;}
-.edu-sub{color:var(--ink-soft); font-size:.92rem;}
+.edu-date{font-family:var(--type); font-size:13.5px; color:var(--soft); padding-top:3px;}
+.edu-title{font-weight:600; font-size:1.08rem;}
+.edu-sub{color:var(--soft); font-size:.95rem;}
 .plain-list{margin:0; padding:0; list-style:none;}
-.plain-list li{padding:14px 0; border-top:1px solid var(--hair); color:var(--ink-soft);}
+.plain-list li{padding:14px 0; border-top:1px solid var(--hair); color:var(--soft);}
 .plain-list li:first-child{border-top-color:var(--ink);}
 .plain-list strong{color:var(--ink); font-weight:600;}
 
-/* Contact */
-#contact{padding:16px 0 80px;}
-.contact-box{background:var(--ink); color:#fff; padding:56px;}
-.contact-box h2{font-size:clamp(1.8rem,4vw,2.6rem); font-stretch:85%; font-weight:800; letter-spacing:-.015em; max-width:24ch; margin-bottom:14px;}
-.contact-box p{color:rgba(255,255,255,.82);}
-.contact-links{display:flex; flex-wrap:wrap; gap:8px 22px; margin:22px 0 28px; font-family:var(--mono); font-size:13px;}
-.contact-links a{color:#fff; border-bottom:1px solid rgba(255,255,255,.4);}
-.contact-links a:hover{border-color:#fff; text-decoration:none;}
-.contact-box .cta-row{margin:0;}
-.contact-box .btn-primary{background:#fff; border-color:#fff; color:var(--ink);}
-.contact-box .btn-primary:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
-.contact-box .btn-outline{border-color:#fff; color:#fff;}
-.contact-box .btn-outline:hover{background:#fff; color:var(--ink);}
-footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
-.footer-note{font-family:var(--mono); font-size:12px; letter-spacing:.05em; color:var(--ink-soft); margin:0; max-width:none;}
+/* ---------- Contact ---------- */
+#contact{border-top:1px solid var(--ink); padding:80px 0 88px;}
+#contact h2{font-size:clamp(2rem,4.4vw,3rem); font-weight:500; letter-spacing:-.012em; max-width:22ch; margin-bottom:18px;}
+.contact-links{display:flex; flex-wrap:wrap; gap:8px 24px; margin:22px 0 30px; font-family:var(--type); font-size:14px;}
+footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
+.footer-note{font-family:var(--type); font-size:12.5px; letter-spacing:.03em; color:var(--soft); margin:0; max-width:none;}
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr; gap:36px;}
-  .plate{max-width:340px;}
+  .hero-grid{grid-template-columns:1fr; gap:40px; align-items:start;}
+  .portrait{max-width:340px;}
   .split{display:block;}
   .split > h2{position:static; margin-bottom:24px;}
   .focus-grid{grid-template-columns:1fr;}
-  .stat-row{grid-template-columns:repeat(2,1fr);}
-  .stat{border-left:none; padding:18px 16px 18px 0; border-top:1px solid var(--hair);}
-  .stat:nth-child(-n+2){border-top:none;}
+  .proj{grid-template-columns:1fr;}
+  .proj-dl{grid-template-columns:1fr;}
 }
 @media (max-width:860px){
-  .tabs{position:absolute; top:64px; left:0; right:0; background:var(--paper); flex-direction:column; align-items:stretch; gap:0; border-bottom:1px solid var(--ink); display:none;}
+  .tabs{position:absolute; top:64px; left:0; right:0; background:var(--page); flex-direction:column; align-items:stretch; gap:0; border-bottom:1px solid var(--ink); display:none;}
   .tabs li{border-top:1px solid var(--hair);}
   .tabs li:first-child{border-top:none;}
-  .tabs a{display:block; padding:15px 32px;}
-  .tabs .pill{margin:14px 32px; padding:14px; text-align:center;}
+  .tabs a{display:block; padding:15px 32px; border-bottom:none;}
   #nav-toggle:checked ~ .tabs{display:flex;}
   .burger{display:block;}
 }
 @media (max-width:640px){
+  body{font-size:17px;}
   .wrap,.nav-inner{padding-left:20px; padding-right:20px;}
   .tabs a{padding-left:20px; padding-right:20px;}
-  .tabs .pill{margin:14px 20px;}
-  .contrib-grid,.proj-grid{grid-template-columns:1fr;}
-  .pub-featured{grid-template-columns:1fr; row-gap:6px;}
-  .pub-badge{grid-row:auto; grid-column:1; padding-top:0;}
-  .pub-featured h3,.pub-featured .pub-meta{grid-column:1;}
+  section{padding:56px 0;}
+  .drawer{padding:22px 8px;}
+  .js .tabs-row{padding-left:0; gap:6px; margin-bottom:12px;}
+  .tab{top:0; border:1px solid var(--tray-edge); border-radius:5px; padding:8px 12px;}
+  .tab[aria-pressed="true"]{padding-bottom:8px;}
+  .contrib-grid{grid-template-columns:1fr;}
   .edu-item{grid-template-columns:1fr; gap:4px;}
-  .contact-box{padding:34px 24px;}
+}
+
+/* ---------- Print: cards at true size, 125 x 75 mm, two per row on A4 landscape ---------- */
+@page{size:A4 landscape; margin:10mm;}
+@media print{
+  :root{--tray:#fff; --page:#fff;}
+  body{background:#fff;}
+  nav,.skip,.hero,#research,#projects,#research-visit,#about,#recognition,#contact,footer,.tabs-row,.pub-note,.split > h2{display:none !important;}
+  main,.wrap{display:block; max-width:none; padding:0;}
+  #publications{display:block !important; padding:0; border:0;}
+  .drawer{background:none; border:0; padding:0; box-shadow:none; display:grid; grid-template-columns:repeat(2,125mm); gap:8mm; justify-content:center;}
+  .card-wrap[hidden]{display:block;}
+  .card-wrap{width:125mm; break-inside:avoid;}
+  .card{box-shadow:none; border:.25mm solid #888; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .card:hover{transform:none;}
+  .card::after{box-shadow:inset 0 0 0 .25mm #888;}
+  a{text-decoration:none;}
 }
 </style>
 </head>
@@ -221,7 +242,7 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
       <li><a href="#publications">Publications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener">CV</a></li>
-      <li><a href="#research-visit" class="pill">Research Visit</a></li>
+      <li><a href="#research-visit" class="cta">Research visit</a></li>
     </ul>
   </div>
 </nav>
@@ -231,6 +252,7 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
 <div id="top" class="wrap hero">
   <div class="hero-grid">
     <div>
+      <p class="kicker">PhD researcher · Mizoram University</p>
       <h1 class="name">Kumar Sumit</h1>
       <p class="role">AI · Semantic Retrieval · Knowledge Organization</p>
       <p class="statement">
@@ -238,14 +260,9 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
         scholarly and cultural knowledge, with particular interests in semantic search, multilingual
         information access, and scholarly communication.
       </p>
-      <dl class="record">
-        <div><dt>Author</dt><dd>Sumit, Kumar</dd></div>
-        <div><dt>Affiliation</dt><dd>PhD researcher, Mizoram University</dd></div>
-        <div><dt>Subjects</dt><dd>Semantic retrieval; knowledge organization; scholarly communication</dd></div>
-        <div><dt>Status</dt><dd>Seeking visiting-researcher opportunities</dd></div>
-      </dl>
+      <p class="seeking">Seeking visiting-researcher opportunities</p>
       <div class="cta-row">
-        <a href="#research-visit" class="btn btn-primary">Research Visit</a>
+        <a href="#research-visit" class="btn btn-primary">Research visit</a>
         <a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
       </div>
       <div class="link-row">
@@ -256,28 +273,10 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
         <a href="mailto:aryan.sumit121@gmail.com">Email</a>
       </div>
     </div>
-    <figure class="plate">
+    <figure class="portrait">
       <img src="portrait_final.jpg" alt="Portrait of Kumar Sumit">
-      <figcaption>Dept. of Library and Information Science · Mizoram University</figcaption>
+      <figcaption>Dept. of Library and Information Science, Mizoram University</figcaption>
     </figure>
-  </div>
-</div>
-
-<div class="seek-banner">
-  <div class="wrap">
-    <p><strong>Seeking visiting-researcher opportunities</strong> — universities, research centres, and knowledge-organization / AI labs.</p>
-    <a href="#research-visit">See collaboration areas</a>
-  </div>
-</div>
-
-<div class="strip">
-  <div class="wrap">
-    <div class="stat-row">
-      <div class="stat"><div class="stat-num">99.9<span class="ord">th</span></div><div class="stat-label">Percentile, UGC-NET Junior Research Fellowship</div></div>
-      <div class="stat"><div class="stat-num">7</div><div class="stat-label">Peer-reviewed publications &amp; preprints</div></div>
-      <div class="stat"><div class="stat-num">5</div><div class="stat-label">International conference acceptances</div></div>
-      <div class="stat"><div class="stat-num">7</div><div class="stat-label">Open-source research repositories</div></div>
-    </div>
   </div>
 </div>
 
@@ -313,121 +312,228 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
 
 <section id="publications" class="split">
   <h2>Selected publications</h2>
+  <p class="pub-note"><span id="pub-total">13</span> records, each set as a standard catalogue card (125 × 75 mm). Click a card to open the paper. Print this page to get the cards at true size (A4 landscape).</p>
 
-  <div class="pub-featured">
-    <span class="pub-badge">Journal Article</span>
-    <h3><a href="https://doi.org/10.56042/alis.v73i2.31022" target="_blank" rel="noopener">AI Governance in Scholarly Publishing: A Computational Analysis of Policy Structures and Gaps</a></h3>
-    <div class="pub-meta">Sumit, K., Buragohain, P., &amp; Singh, M. K. (2026) — Annals of Library and Information Studies, 73(2), 195–204</div>
+  <div class="tabs-row" role="group" aria-label="Filter publications">
+    <button type="button" class="tab" data-kind="all" aria-pressed="true">All<span class="n">13</span></button>
+    <button type="button" class="tab" data-kind="article" aria-pressed="false">Articles<span class="n">3</span></button>
+    <button type="button" class="tab" data-kind="proceedings" aria-pressed="false">Proceedings<span class="n">3</span></button>
+    <button type="button" class="tab" data-kind="preprint" aria-pressed="false">Preprints<span class="n">1</span></button>
+    <button type="button" class="tab" data-kind="accepted" aria-pressed="false">Accepted<span class="n">6</span></button>
   </div>
-  <div class="pub-featured">
-    <span class="pub-badge">Journal Article</span>
-    <h3><a href="https://www.researchgate.net/publication/412973526" target="_blank" rel="noopener">Mapping a Decade of Health Crisis Research in India (2015–2024)</a></h3>
-    <div class="pub-meta">Buragohain, P., Sumit, K., Tripathi, P., et al., &amp; Singh, M. K. (2026) — Continuity &amp; Resilience Review</div>
-  </div>
-  <div class="pub-featured">
-    <span class="pub-badge">Journal Article</span>
-    <h3><a href="https://www.researchgate.net/publication/413926823" target="_blank" rel="noopener">Artificial Intelligence Governance as Policy Discourse</a></h3>
-    <div class="pub-meta">Sumit, K., Singh, M. K., &amp; Buragohain, P. (2026) — Annals of Library and Information Studies</div>
-  </div>
+  <p class="sr-only" id="pub-count" aria-live="polite"></p>
 
-  <div class="pub-group">
-    <div class="pub-group-title">Conference proceedings &amp; book chapters</div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title"><a href="https://www.researchgate.net/publication/406314492" target="_blank" rel="noopener">From Keywords to Connections: Concept-Based Discovery in Multilingual Library Catalogues</a></div>
-      <div class="pub-row-meta">Sumit, K., Singh, M. K., &amp; Buragohain, P. — Evolving Information Landscape, Vol. 1, pp. 421–435</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title"><a href="https://www.researchgate.net/publication/405160883" target="_blank" rel="noopener">Mapping Scholarly Discourse on Sustainable Agriculture and Environmental Stewardship</a></div>
-      <div class="pub-row-meta">Sumit, K., Longlen, T., &amp; Tripathi, P. — I-KOAL 2026, Vol. 1, pp. 320–328</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title"><a href="https://www.researchgate.net/publication/413927217" target="_blank" rel="noopener">A Scientometric Study of Indian Knowledge Systems in Agriculture (1992–2024)</a></div>
-      <div class="pub-row-meta">Barman, P., Sumit, K., &amp; Chanchinmawia, F. — I-KOAL 2026, Vol. 1, pp. 253–264</div>
-    </div></div>
-  </div>
+  <div class="drawer">
 
-  <div class="pub-group">
-    <div class="pub-group-title">Preprints</div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title"><a href="https://www.researchgate.net/publication/413779677" target="_blank" rel="noopener">Does Open Access Matter for Citations? A Topic-Stratified Analysis of LIS</a></div>
-      <div class="pub-row-meta">Kalita, A., Sumit, K., Singh, M. K., &amp; Gupta, D.</div>
-    </div></div>
-  </div>
+    <!--
+      TO ADD A PUBLICATION: copy one whole <article class="card-wrap"> ... </article> block, paste it where it
+      should appear, and edit it. Tab counts and the record total update by themselves.
+      data-kind is one of: article, proceedings, preprint, accepted.
+      Accession IDs (KS-YYYY-NN) are permanent. Give a new item the next number and never reuse one.
 
-  <div class="pub-group">
-    <div class="pub-group-title">Accepted abstracts &amp; conference acceptances</div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title">Is Semantic Retrieval Enough? Indigenous Semantic Retrieval Gap in Multilingual Low-Resource Library Environments</div>
-      <div class="pub-row-meta">Accepted — IFLA World Library and Information Congress (WLIC) 2026</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title">From Metadata to Knowledge Graphs: Reimagining ETD Discovery Using Hybrid Semantic Retrieval</div>
-      <div class="pub-row-meta">Abstract accepted — ETD 2026 (full paper in progress)</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title">Beyond Publication Growth: Measuring Semantic Maturity in Scholarly Topics (Long Paper)</div>
-      <div class="pub-row-meta">ASIST SIG-METS/STI Symposium — ASIST Annual Meeting 2026</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title">Design, Development and Evaluation of a Multilingual Semantic Library OPAC Module for Scheduled Languages of India</div>
-      <div class="pub-row-meta">Doctoral Colloquium — ASIST Annual Meeting 2026</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title">Bridging Representation Gaps: Culturally Grounded Retrieval in Indigenous Multilingual OPAC</div>
-      <div class="pub-row-meta">Poster — ASIST Annual Meeting 2026</div>
-    </div></div>
-    <div class="pub-row"><div class="pub-year">2026</div><div>
-      <div class="pub-row-title">Semantic Workbench for Ethnolinguistic Traversal and Access: Supporting Cross-Community Discovery across Libraries in Northeast India</div>
-      <div class="pub-row-meta">Accepted for oral presentation — PLANNER 2026, INFLIBNET Centre &amp; Gauhati University, Guwahati, Assam</div>
-    </div></div>
+      TEMPLATE (published item):
+      <article class="card-wrap" data-kind="article"><div class="card">
+        <div class="card-top"><span class="acc">KS-2026-14</span></div>
+        <div class="card-body">
+          <p class="entry">Surname, X.</p>
+          <p class="desc"><a href="PAPER-URL" target="_blank" rel="noopener">Title in sentence case</a><span class="opt"> / A. Author, B. Author.</span> — Journal or publisher, year, pages.</p>
+          <p class="note">DOI or other note (optional)</p>
+          <p class="tracings">1. Subject. 2. Subject. I. Added entry. II. Title.</p>
+        </div>
+      </div></article>
+
+      ACCEPTED BUT NOT YET PUBLISHED: use data-kind="accepted", add <span class="stamp">ACCEPTED</span> right after the
+      accession ID, and write the title as plain text. Add a link later and the whole card becomes clickable.
+      WHEN IT IS PUBLISHED: change data-kind, delete the stamp, add the link and imprint, keep the same ID.
+    -->
+
+    <article class="card-wrap" data-kind="article"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-01</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc"><a href="https://doi.org/10.56042/alis.v73i2.31022" target="_blank" rel="noopener">AI governance in scholarly publishing : a computational analysis of policy structures and gaps</a><span class="opt"> / K. Sumit, P. Buragohain, M. K. Singh.</span> — Annals of Library and Information Studies, v. 73, no. 2 (2026), pp. 195–204.</p>
+        <p class="note">DOI 10.56042/alis.v73i2.31022</p>
+        <p class="tracings">1. Artificial intelligence—Governance. 2. Scholarly publishing. I. Buragohain, P. II. Singh, M. K. III. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="article"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-02</span></div>
+      <div class="card-body">
+        <p class="entry">Buragohain, P.</p>
+        <p class="desc"><a href="https://www.researchgate.net/publication/412973526" target="_blank" rel="noopener">Mapping a decade of health crisis research in India (2015–2024)</a><span class="opt"> / P. Buragohain, K. Sumit, P. Tripathi [et al.], and M. K. Singh.</span> — Continuity &amp; Resilience Review, 2026.</p>
+        <p class="tracings">1. Health crises—India—Research. I. Sumit, K. II. Tripathi, P. III. Singh, M. K. IV. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="article"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-03</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc"><a href="https://www.researchgate.net/publication/413926823" target="_blank" rel="noopener">Artificial intelligence governance as policy discourse</a><span class="opt"> / K. Sumit, M. K. Singh, P. Buragohain.</span> — Annals of Library and Information Studies, 2026.</p>
+        <p class="tracings">1. Artificial intelligence—Governance. I. Singh, M. K. II. Buragohain, P. III. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="proceedings"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-04</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc"><a href="https://www.researchgate.net/publication/406314492" target="_blank" rel="noopener">From keywords to connections : concept-based discovery in multilingual library catalogues</a><span class="opt"> / K. Sumit, M. K. Singh, P. Buragohain. — Delhi : Devyani Publishers and Distributors, 2026.</span></p>
+        <p class="note"><span class="full">In: Evolving information landscape : making libraries future-ready, v. 1, pp. 421–435.</span><span class="brief">In: Evolving information landscape, v. 1, pp. 421–435.</span></p>
+        <p class="tracings">1. Semantic search. 2. Multilingual information retrieval. 3. Library catalogues. I. Singh, M. K. II. Buragohain, P. III. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="proceedings"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-05</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc"><a href="https://www.researchgate.net/publication/405160883" target="_blank" rel="noopener">Mapping scholarly discourse on sustainable agriculture and environmental stewardship</a><span class="opt"> / K. Sumit, T. Longlen, P. Tripathi.</span></p>
+        <p class="note">In: I-KOAL 2026, v. 1, pp. 320–328.</p>
+        <p class="tracings">1. Sustainable agriculture. 2. Scholarly communication. I. Longlen, T. II. Tripathi, P. III. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="proceedings"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-06</span></div>
+      <div class="card-body">
+        <p class="entry">Barman, P.</p>
+        <p class="desc"><a href="https://www.researchgate.net/publication/413927217" target="_blank" rel="noopener">A scientometric study of Indian knowledge systems in agriculture (1992–2024)</a><span class="opt"> / P. Barman, K. Sumit, F. Chanchinmawia.</span></p>
+        <p class="note">In: I-KOAL 2026, v. 1, pp. 253–264.</p>
+        <p class="tracings">1. Indian knowledge systems. 2. Scientometrics. 3. Agriculture. I. Sumit, K. II. Chanchinmawia, F. III. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="preprint"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-07</span></div>
+      <div class="card-body">
+        <p class="entry">Kalita, A.</p>
+        <p class="desc"><a href="https://www.researchgate.net/publication/413779677" target="_blank" rel="noopener">Does open access matter for citations? A topic-stratified analysis of LIS</a><span class="opt"> / A. Kalita, K. Sumit, M. K. Singh, D. Gupta.</span> — Preprint, 2026.</p>
+        <p class="tracings">1. Open access publishing. 2. Citation analysis. 3. Library and information science. I. Sumit, K. II. Singh, M. K. III. Gupta, D. IV. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="accepted"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-08</span><span class="stamp">ACCEPTED</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc">Is semantic retrieval enough? Indigenous Semantic Retrieval Gap in multilingual low-resource library environments.</p>
+        <p class="note"><span class="full">Accepted for presentation, IFLA World Library and Information Congress (WLIC) 2026.</span><span class="brief">Accepted for presentation, IFLA WLIC 2026.</span></p>
+        <p class="tracings">1. Semantic search. 2. Indigenous knowledge organization. 3. Multilingual information retrieval. I. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="accepted"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-09</span><span class="stamp">ACCEPTED</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc">From metadata to knowledge graphs : reimagining ETD discovery using hybrid semantic retrieval.</p>
+        <p class="note">Abstract accepted, ETD 2026. Full paper in progress.</p>
+        <p class="tracings">1. Electronic theses and dissertations. 2. Semantic search. I. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="accepted"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-10</span><span class="stamp">ACCEPTED</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc">Beyond publication growth : measuring semantic maturity in scholarly topics (long paper).</p>
+        <p class="note">ASIST SIG-METS/STI Symposium, ASIST Annual Meeting 2026.</p>
+        <p class="tracings">1. Scientometrics. 2. Scholarly communication. I. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="accepted"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-11</span><span class="stamp">ACCEPTED</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc">Design, development and evaluation of a multilingual semantic library OPAC module for Scheduled Languages of India.</p>
+        <p class="note">Doctoral Colloquium, ASIST Annual Meeting 2026.</p>
+        <p class="tracings">1. Library catalogues. 2. Multilingual information retrieval. 3. Scheduled Languages of India. I. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="accepted"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-12</span><span class="stamp">ACCEPTED</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc">Bridging representation gaps : culturally grounded retrieval in Indigenous multilingual OPAC.</p>
+        <p class="note">Poster, ASIST Annual Meeting 2026.</p>
+        <p class="tracings">1. Indigenous knowledge organization. 2. Library catalogues. I. Title.</p>
+      </div>
+    </div></article>
+
+    <article class="card-wrap" data-kind="accepted"><div class="card">
+      <div class="card-top"><span class="acc">KS-2026-13</span><span class="stamp">ACCEPTED</span></div>
+      <div class="card-body">
+        <p class="entry">Sumit, K.</p>
+        <p class="desc">Semantic Workbench for Ethnolinguistic Traversal and Access : supporting cross-community discovery across libraries in Northeast India.</p>
+        <p class="note"><span class="full">Accepted for oral presentation, PLANNER 2026, INFLIBNET Centre &amp; Gauhati University, Guwahati, Assam.</span><span class="brief">Accepted for oral presentation, PLANNER 2026, Guwahati.</span></p>
+        <p class="tracings">1. Ontologies. 2. Digital libraries—Northeast India. I. Title.</p>
+      </div>
+    </div></article>
+
   </div>
 </section>
 
 <section id="projects" class="split">
   <h2>Research &amp; technical projects</h2>
   <p>Computational projects supporting the research above. Full code on <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>.</p>
-  <div class="proj-grid">
+  <div class="proj-list">
     <div class="proj">
       <div class="proj-name">ISRG</div>
-      <div class="proj-row"><strong>Research problem</strong>Retrieval quality for multilingual, low-resource library collections</div>
-      <div class="proj-row"><strong>Method</strong>Semantic retrieval methodology development</div>
-      <div class="proj-row"><strong>Outcome</strong>Basis for filed copyright methodology and IFLA WLIC 2026 submission</div>
-      <a href="https://github.com/Library-sssm/ISRG" target="_blank" rel="noopener">View code</a>
+      <dl class="proj-dl">
+        <div><dt>Research problem</dt><dd>Retrieval quality for multilingual, low-resource library collections</dd></div>
+        <div><dt>Method</dt><dd>Semantic retrieval methodology development</dd></div>
+        <div><dt>Outcome</dt><dd>Basis for filed copyright methodology and IFLA WLIC 2026 submission</dd></div>
+      </dl>
+      <a class="proj-link" href="https://github.com/Library-sssm/ISRG" target="_blank" rel="noopener">View code</a>
     </div>
     <div class="proj">
       <div class="proj-name">RAG_final</div>
-      <div class="proj-row"><strong>Research problem</strong>Document and library discovery beyond keyword matching</div>
-      <div class="proj-row"><strong>Method</strong>Retrieval-augmented generation pipeline</div>
-      <div class="proj-row"><strong>Outcome</strong>Working RAG pipeline for library/document discovery</div>
-      <a href="https://github.com/Library-sssm/RAG_final" target="_blank" rel="noopener">View code</a>
+      <dl class="proj-dl">
+        <div><dt>Research problem</dt><dd>Document and library discovery beyond keyword matching</dd></div>
+        <div><dt>Method</dt><dd>Retrieval-augmented generation pipeline</dd></div>
+        <div><dt>Outcome</dt><dd>Working RAG pipeline for library/document discovery</dd></div>
+      </dl>
+      <a class="proj-link" href="https://github.com/Library-sssm/RAG_final" target="_blank" rel="noopener">View code</a>
     </div>
     <div class="proj">
       <div class="proj-name">semanticwork_workbench</div>
-      <div class="proj-row"><strong>Research problem</strong>Comparing semantic search model behaviour</div>
-      <div class="proj-row"><strong>Method</strong>Experimentation workbench for embedding/model comparisons</div>
-      <div class="proj-row"><strong>Outcome</strong>Reusable experimentation environment</div>
-      <a href="https://github.com/Library-sssm/semanticwork_workbench" target="_blank" rel="noopener">View code</a>
+      <dl class="proj-dl">
+        <div><dt>Research problem</dt><dd>Comparing semantic search model behaviour</dd></div>
+        <div><dt>Method</dt><dd>Experimentation workbench for embedding/model comparisons</dd></div>
+        <div><dt>Outcome</dt><dd>Reusable experimentation environment</dd></div>
+      </dl>
+      <a class="proj-link" href="https://github.com/Library-sssm/semanticwork_workbench" target="_blank" rel="noopener">View code</a>
     </div>
     <div class="proj">
       <div class="proj-name">ontology</div>
-      <div class="proj-row"><strong>Research problem</strong>Representing knowledge structures for organization schemas</div>
-      <div class="proj-row"><strong>Method</strong>Ontology design</div>
-      <div class="proj-row"><strong>Outcome</strong>Knowledge-organization schema components</div>
-      <a href="https://github.com/Library-sssm/ontology" target="_blank" rel="noopener">View code</a>
+      <dl class="proj-dl">
+        <div><dt>Research problem</dt><dd>Representing knowledge structures for organization schemas</dd></div>
+        <div><dt>Method</dt><dd>Ontology design</dd></div>
+        <div><dt>Outcome</dt><dd>Knowledge-organization schema components</dd></div>
+      </dl>
+      <a class="proj-link" href="https://github.com/Library-sssm/ontology" target="_blank" rel="noopener">View code</a>
     </div>
     <div class="proj">
       <div class="proj-name">lda-topicmodeling</div>
-      <div class="proj-row"><strong>Research problem</strong>Identifying latent themes in bibliometric corpora</div>
-      <div class="proj-row"><strong>Method</strong>Latent Dirichlet Allocation</div>
-      <div class="proj-row"><strong>Outcome</strong>Topic models used across several published bibliometric studies</div>
-      <a href="https://github.com/aryansumit121-ctrl/lda-topicmodeling" target="_blank" rel="noopener">View code</a>
+      <dl class="proj-dl">
+        <div><dt>Research problem</dt><dd>Identifying latent themes in bibliometric corpora</dd></div>
+        <div><dt>Method</dt><dd>Latent Dirichlet Allocation</dd></div>
+        <div><dt>Outcome</dt><dd>Topic models used across several published bibliometric studies</dd></div>
+      </dl>
+      <a class="proj-link" href="https://github.com/aryansumit121-ctrl/lda-topicmodeling" target="_blank" rel="noopener">View code</a>
     </div>
     <div class="proj">
       <div class="proj-name">sentiment_analyser</div>
-      <div class="proj-row"><strong>Research problem</strong>Measuring sentiment in scholarly and discourse text</div>
-      <div class="proj-row"><strong>Method</strong>Sentiment analysis pipeline</div>
-      <div class="proj-row"><strong>Outcome</strong>Applied in scientometric and discourse research, incl. health crisis research study</div>
-      <a href="https://github.com/aryansumit121-ctrl/sentiment_analyser" target="_blank" rel="noopener">View code</a>
+      <dl class="proj-dl">
+        <div><dt>Research problem</dt><dd>Measuring sentiment in scholarly and discourse text</dd></div>
+        <div><dt>Method</dt><dd>Sentiment analysis pipeline</dd></div>
+        <div><dt>Outcome</dt><dd>Applied in scientometric and discourse research, incl. health crisis research study</dd></div>
+      </dl>
+      <a class="proj-link" href="https://github.com/aryansumit121-ctrl/sentiment_analyser" target="_blank" rel="noopener">View code</a>
     </div>
   </div>
 </section>
@@ -443,17 +549,17 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
   <div class="area">
     <h3>Semantic &amp; AI-based information retrieval</h3>
     <p>Retrieval systems that understand meaning rather than matching keywords, and how to evaluate them rigorously.</p>
-    <div class="tag-row"><span class="tag">Semantic search</span><span class="tag">Embeddings</span><span class="tag">Retrieval-augmented generation</span><span class="tag">Retrieval evaluation</span></div>
+    <p class="topics">Semantic search · Embeddings · Retrieval-augmented generation · Retrieval evaluation</p>
   </div>
   <div class="area">
     <h3>Knowledge organization &amp; multilingual information access</h3>
     <p>Representing and connecting knowledge across languages and resource levels, including for Indigenous and cultural-heritage collections.</p>
-    <div class="tag-row"><span class="tag">Ontologies</span><span class="tag">Knowledge graphs</span><span class="tag">Multilingual retrieval</span><span class="tag">Indigenous knowledge organization</span></div>
+    <p class="topics">Ontologies · Knowledge graphs · Multilingual retrieval · Indigenous knowledge organization</p>
   </div>
   <div class="area">
     <h3>Scholarly communication &amp; research evaluation</h3>
     <p>Computational and quantitative methods for understanding how scholarly knowledge is produced, cited, and evaluated.</p>
-    <div class="tag-row"><span class="tag">Bibliometrics</span><span class="tag">Scientometrics</span><span class="tag">Citation analysis</span><span class="tag">Research evaluation</span></div>
+    <p class="topics">Bibliometrics · Scientometrics · Citation analysis · Research evaluation</p>
   </div>
 
   <h3 class="subhead">What I can contribute</h3>
@@ -510,20 +616,18 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
 
 <section id="contact">
   <div class="wrap">
-    <div class="contact-box">
-      <h2>Interested in collaborating or discussing a visiting research opportunity?</h2>
-      <p>I welcome contact from researchers and research groups working on semantic retrieval, knowledge organization, digital libraries, or scholarly communication.</p>
-      <div class="contact-links">
-        <a href="mailto:aryan.sumit121@gmail.com">aryan.sumit121@gmail.com</a>
-        <a href="https://orcid.org/0009-0007-6298-2133" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://scholar.google.com/citations?user=8TjJp0sAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.researchgate.net/profile/Kumar-Sumit-6" target="_blank" rel="noopener">ResearchGate</a>
-      </div>
-      <div class="cta-row">
-        <a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download CV</a>
-        <a href="mailto:aryan.sumit121@gmail.com" class="btn btn-outline">Email me</a>
-      </div>
+    <h2>Interested in collaborating or discussing a visiting research opportunity?</h2>
+    <p>I welcome contact from researchers and research groups working on semantic retrieval, knowledge organization, digital libraries, or scholarly communication.</p>
+    <div class="contact-links">
+      <a href="mailto:aryan.sumit121@gmail.com">aryan.sumit121@gmail.com</a>
+      <a href="https://orcid.org/0009-0007-6298-2133" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=8TjJp0sAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.researchgate.net/profile/Kumar-Sumit-6" target="_blank" rel="noopener">ResearchGate</a>
+    </div>
+    <div class="cta-row">
+      <a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download CV</a>
+      <a href="mailto:aryan.sumit121@gmail.com" class="btn btn-outline">Email me</a>
     </div>
   </div>
 </section>
@@ -535,6 +639,50 @@ footer{border-top:1px solid var(--ink); padding:26px 0 40px;}
     <p class="footer-note">Department of Library and Information Science, Mizoram University · Aizawl, India</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card-wrap'));
+  var tabs  = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var count = document.getElementById('pub-count');
+  var total = document.getElementById('pub-total');
+
+  // Counts update themselves, so adding or removing a card needs no other edit.
+  var by = {};
+  cards.forEach(function(c){ var k = c.getAttribute('data-kind'); by[k] = (by[k] || 0) + 1; });
+  tabs.forEach(function(t){
+    var k = t.getAttribute('data-kind');
+    var n = (k === 'all') ? cards.length : (by[k] || 0);
+    var el = t.querySelector('.n'); if (el) el.textContent = n;
+    t.hidden = (n === 0);
+  });
+  if (total) total.textContent = cards.length;
+
+  function show(kind){
+    var n = 0;
+    cards.forEach(function(c){
+      var on = (kind === 'all' || c.getAttribute('data-kind') === kind);
+      c.hidden = !on; if (on) n++;
+    });
+    tabs.forEach(function(t){ t.setAttribute('aria-pressed', t.getAttribute('data-kind') === kind ? 'true' : 'false'); });
+    if (count) count.textContent = 'Showing ' + n + ' of ' + cards.length + ' records';
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.getAttribute('data-kind')); }); });
+
+  // The whole card is clickable when its title is a link. Real links and text selection still work normally.
+  cards.forEach(function(w){
+    var card = w.querySelector('.card');
+    var a = card.querySelector('.desc a');
+    if (!a) return;
+    card.classList.add('linked');
+    card.addEventListener('click', function(e){
+      if (e.target.closest('a')) return;
+      if (String(window.getSelection())) return;
+      a.click();
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
