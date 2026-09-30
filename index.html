@@ -81,8 +81,8 @@ nav{position:sticky; top:0; z-index:50; background:var(--page); border-bottom:1p
 .overview-btn[hidden]{display:none;}
 
 .graph-shell{display:none;}
-.js .graph-shell{display:grid; grid-template-columns:1.35fr 1fr; gap:0; border:1px solid var(--hair); background:var(--panel);}
-.graph-stage{position:relative; aspect-ratio:16/11; border-right:1px solid var(--hair);}
+.js .graph-shell{display:grid; grid-template-columns:1.35fr 1fr; grid-template-rows:520px; gap:0; border:1px solid var(--hair); background:var(--panel);}
+.graph-stage{position:relative; height:100%; border-right:1px solid var(--hair);}
 .graph-stage svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible;}
 .graph-stage svg line{stroke:var(--line); stroke-width:1.2;}
 .js .graph-stage svg line{transition:opacity .2s ease;}
@@ -99,7 +99,7 @@ nav{position:sticky; top:0; z-index:50; background:var(--page); border-bottom:1p
 .node.leaf .lbl{font-family:var(--mono); font-weight:400; font-size:11.5px; color:var(--soft); text-transform:none; letter-spacing:0;}
 .node.area[aria-current="true"] .dot{background:var(--ink); box-shadow:0 0 0 5px rgba(34,37,42,.14);}
 
-.panel{padding:30px 28px; display:flex; flex-direction:column;}
+.panel{padding:30px 28px; display:flex; flex-direction:column; height:100%; overflow-y:auto;}
 .panel-eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--indigo); margin-bottom:10px; max-width:none;}
 .panel h2{font-size:1.5rem; font-weight:600; margin-bottom:12px;}
 .panel p.desc{font-size:1.02rem; color:var(--ink); max-width:none; margin-bottom:20px;}
