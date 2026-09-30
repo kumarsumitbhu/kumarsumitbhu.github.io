@@ -4,139 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kumar Sumit — AI, Semantic Retrieval &amp; Knowledge Organization Researcher</title>
-<meta name="description" content="Kumar Sumit — PhD researcher, Mizoram University. Computational approaches to semantic retrieval, knowledge organization, multilingual information access, and scholarly communication. Seeking visiting-researcher collaborations.">
+<meta name="description" content="Kumar Sumit — PhD researcher, Mizoram University. Computational approaches to semantic retrieval, knowledge organization, multilingual information access, and scholarly communication. Open for research visits and collaborations.">
 <script>document.documentElement.className='js';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&amp;family=Schibsted+Grotesk:wght@500;600;700&amp;family=DM+Mono:wght@400;500&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
-  --page:#F3F0E7;
-  --card:#FCF8EA;
-  --tray:#EAE4D3;
-  --tray-edge:#D9D3C3;
-  --ink:#1D1B17;
-  --soft:#5B574C;
-  --red:#B3372B;          /* catalogue red: the one accent colour */
-  --rule-blue:#BBCBE0;
-  --hair:#D9D3C3;
-  --maxw:1120px;
+  /* ---- site palette: warm white / graphite / muted indigo ---- */
+  --page:#F7F5F0;
+  --panel:#FBFAF7;
+  --ink:#22252A;
+  --soft:#5B5F66;
+  --faint:#8A8D92;
+  --indigo:#48538C;
+  --indigo-soft:#7B84B3;
+  --hair:#E1DED4;
+  --line:#BFBCB2;
+  --maxw:1160px;
   --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Schibsted Grotesk','Helvetica Neue',Arial,sans-serif;
+  --mono:'DM Mono',ui-monospace,Menlo,Consolas,monospace;
+
+  /* ---- catalogue zone only: the one place cream + red + typewriter lives ---- */
+  --cat-page:#F3F0E7;
+  --cat-card:#FCF8EA;
+  --cat-tray:#EAE4D3;
+  --cat-tray-edge:#D9D3C3;
+  --cat-red:#B3372B;
+  --cat-rule-blue:#BBCBE0;
+  --cat-hair:#D9D3C3;
   --type:'Courier Prime','Courier New',Courier,monospace;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-[id]{scroll-margin-top:84px;}
+[id]{scroll-margin-top:80px;}
 body{margin:0; background:var(--page); color:var(--ink); font-family:var(--serif); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased;}
-h1,h2,h3{margin:0; font-weight:600; line-height:1.15;}
-a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--red); text-decoration-thickness:1px; text-underline-offset:.2em;}
+h1,h2,h3{margin:0; font-weight:600; line-height:1.15; font-family:var(--serif);}
+a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--indigo-soft); text-decoration-thickness:1px; text-underline-offset:.2em;}
 a:hover{text-decoration-thickness:2px;}
-:focus-visible{outline:2px solid var(--red); outline-offset:3px;}
+:focus-visible{outline:2px solid var(--indigo); outline-offset:3px;}
 img{max-width:100%; display:block;}
 p{margin:0 0 16px; max-width:64ch; color:var(--soft);}
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
-.skip{position:absolute; left:-9999px; top:8px; z-index:100; background:var(--ink); color:#fff; padding:10px 14px; font-family:var(--type); font-size:13px;}
+.skip{position:absolute; left:-9999px; top:8px; z-index:100; background:var(--ink); color:#fff; padding:10px 14px; font-family:var(--mono); font-size:13px;}
 .skip:focus{left:8px;}
 .sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
+button{font:inherit;}
 
 /* ---------- Nav ---------- */
 nav{position:sticky; top:0; z-index:50; background:var(--page); border-bottom:1px solid var(--hair);}
-.nav-inner{max-width:var(--maxw); margin:0 auto; padding:0 32px; display:flex; align-items:center; justify-content:space-between; height:64px;}
-.nav-name{font-size:21px; font-weight:600; letter-spacing:.005em; text-decoration:none;}
-.tabs{display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0;}
-.tabs a{font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; padding:6px 0; border-bottom:2px solid transparent;}
-.tabs a:hover{border-bottom-color:var(--red);}
-.tabs .cta{border-bottom-color:var(--red);}
+.nav-inner{max-width:var(--maxw); margin:0 auto; padding:0 32px; display:flex; align-items:center; justify-content:space-between; height:62px;}
+.nav-name{font-family:var(--sans); font-weight:700; font-size:16px; letter-spacing:.03em; text-decoration:none;}
+.tabs{display:flex; align-items:center; gap:26px; list-style:none; margin:0; padding:0;}
+.tabs a{font-family:var(--sans); font-weight:600; font-size:13px; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; padding:6px 0; border-bottom:2px solid transparent;}
+.tabs a:hover{border-bottom-color:var(--indigo);}
+.tabs .cta{border-bottom-color:var(--indigo);}
 #nav-toggle{position:absolute; opacity:0; pointer-events:none;}
-.burger{display:none; font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--ink); padding:8px 12px; cursor:pointer;}
-#nav-toggle:focus-visible ~ .burger{outline:2px solid var(--red); outline-offset:3px;}
+.burger{display:none; font-family:var(--sans); font-weight:600; font-size:13px; letter-spacing:.05em; text-transform:uppercase; border:1px solid var(--ink); padding:8px 12px; cursor:pointer; background:none;}
+#nav-toggle:focus-visible ~ .burger{outline:2px solid var(--indigo); outline-offset:3px;}
 
-/* ---------- Hero ---------- */
-.hero{padding-top:72px; padding-bottom:80px;}
-.hero-grid{display:grid; grid-template-columns:1.25fr .75fr; gap:72px; align-items:end;}
-.kicker{font-family:var(--type); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin:0 0 18px; max-width:none;}
-h1.name{font-size:clamp(3rem,6vw,5.2rem); font-weight:500; line-height:.96; letter-spacing:-.02em; margin-bottom:24px;}
-.role{font-family:var(--type); font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 26px; max-width:none;}
-.statement{font-size:1.2rem; color:var(--ink); max-width:50ch; margin-bottom:26px;}
-.seeking{font-family:var(--type); font-size:13.5px; letter-spacing:.02em; color:var(--soft); margin:0 0 24px; max-width:none;}
-.cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px;}
-.btn{display:inline-block; font-family:var(--type); font-size:13px; letter-spacing:.06em; text-transform:uppercase; line-height:1.2; padding:14px 22px; border:1.5px solid var(--ink); text-decoration:none;}
-.btn-primary{background:var(--ink); color:var(--card);}
-.btn-primary:hover{background:var(--red); border-color:var(--red); text-decoration:none;}
-.btn-outline{background:transparent; color:var(--ink);}
-.btn-outline:hover{background:var(--ink); color:var(--card); text-decoration:none;}
-.link-row{display:flex; flex-wrap:wrap; gap:8px 22px; font-family:var(--type); font-size:13.5px;}
-.portrait{margin:0; background:var(--card); padding:10px; border:1px solid var(--hair); box-shadow:0 14px 26px -18px rgba(29,27,23,.55);}
-.portrait img{width:100%; aspect-ratio:4/4.6; object-fit:cover; object-position:center 12%;}
-.portrait figcaption{font-family:var(--type); font-size:12px; letter-spacing:.04em; color:var(--soft); padding:10px 2px 2px;}
+/* ---------- Intro strip ---------- */
+.intro{padding:44px 0 8px;}
+.intro-kicker{font-family:var(--mono); font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--indigo); margin:0 0 10px; max-width:none;}
+.intro h1{font-size:clamp(2rem,4vw,2.8rem); font-weight:500; letter-spacing:-.01em; margin-bottom:10px;}
+.intro .role{font-family:var(--sans); font-weight:600; font-size:13.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--soft); margin:0 0 18px; max-width:none;}
+.intro-links{display:flex; flex-wrap:wrap; gap:8px 20px; font-family:var(--mono); font-size:13px; margin-bottom:6px;}
 
-/* ---------- Research index: the site's own catalogue, right under the hero ---------- */
-.rindex{border-top:1px solid var(--ink); border-bottom:1px solid var(--ink);}
-.rindex-inner{display:grid; grid-template-columns:repeat(3,1fr);}
-.rindex a{display:block; padding:22px 28px; text-decoration:none; border-left:1px solid var(--hair);}
-.rindex a:first-child{border-left:none;}
-.rindex a:hover{background:rgba(179,55,43,.05);}
-.rindex .no{display:block; font-family:var(--type); font-size:12px; letter-spacing:.08em; color:var(--red); margin-bottom:6px;}
-.rindex .lbl{display:block; font-family:var(--type); font-weight:700; font-size:14.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--ink); margin-bottom:5px;}
-.rindex .sub{display:block; font-family:var(--type); font-size:12px; color:var(--soft); letter-spacing:.01em;}
+/* ---------- The research network ---------- */
+.network{padding:24px 0 0;}
+.network-head{display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:10px 24px; margin-bottom:6px;}
+.network-label{font-family:var(--mono); font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint);}
+.overview-btn{font-family:var(--sans); font-weight:600; font-size:12.5px; letter-spacing:.03em; text-transform:uppercase; background:none; border:1px solid var(--line); color:var(--soft); padding:6px 12px; cursor:pointer; border-radius:2px;}
+.overview-btn:hover{border-color:var(--ink); color:var(--ink);}
+.overview-btn[hidden]{display:none;}
 
-/* ---------- Sections: label in the left margin, content on the right ---------- */
-section{padding:72px 0;}
-.wrap > section + section{border-top:1px solid var(--ink);}
-.split{display:grid; grid-template-columns:190px minmax(0,1fr); column-gap:56px;}
-.split > h2{grid-column:1; grid-row:1 / span 40; align-self:start; position:sticky; top:96px;
-  font-family:var(--type); font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; line-height:1.45;}
-.split > h2::before{content:""; display:block; width:32px; height:3px; background:var(--red); margin-bottom:12px;}
+.graph-shell{display:none;}
+.js .graph-shell{display:grid; grid-template-columns:1.35fr 1fr; gap:0; border:1px solid var(--hair); background:var(--panel);}
+.graph-stage{position:relative; aspect-ratio:16/11; border-right:1px solid var(--hair);}
+.graph-stage svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible;}
+.graph-stage svg line{stroke:var(--line); stroke-width:1.2;}
+.js .graph-stage svg line{transition:opacity .2s ease;}
+
+.node{position:absolute; transform:translate(-50%,-50%); background:none; border:none; padding:0; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:7px; color:var(--ink); text-align:center;}
+.node .dot{width:9px; height:9px; border-radius:50%; background:var(--indigo); box-shadow:0 0 0 4px rgba(72,83,140,.12);}
+.node .lbl{font-family:var(--sans); font-weight:600; font-size:12.5px; letter-spacing:.02em; line-height:1.25; max-width:11ch;}
+.node:hover .dot, .node:focus-visible .dot{background:var(--ink); box-shadow:0 0 0 5px rgba(34,37,42,.12);}
+.node.center{cursor:default;}
+.node.center .dot{width:13px; height:13px; background:var(--ink);}
+.node.center .lbl{font-family:var(--serif); font-weight:600; font-size:16px; max-width:16ch; letter-spacing:0;}
+.node.leaf .dot{width:7px; height:7px; background:var(--indigo-soft);}
+.node.leaf{cursor:default;}
+.node.leaf .lbl{font-family:var(--mono); font-weight:400; font-size:11.5px; color:var(--soft); text-transform:none; letter-spacing:0;}
+.node.area[aria-current="true"] .dot{background:var(--ink); box-shadow:0 0 0 5px rgba(34,37,42,.14);}
+
+.panel{padding:30px 28px; display:flex; flex-direction:column;}
+.panel-eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--indigo); margin-bottom:10px; max-width:none;}
+.panel h2{font-size:1.5rem; font-weight:600; margin-bottom:12px;}
+.panel p.desc{font-size:1.02rem; color:var(--ink); max-width:none; margin-bottom:20px;}
+.panel-group{margin-top:auto; padding-top:14px; border-top:1px solid var(--hair);}
+.panel-group + .panel-group{border-top:none; padding-top:0; margin-top:14px;}
+.panel-group h3{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin-bottom:8px; font-weight:500;}
+.panel-list{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px;}
+.panel-list a{font-size:14.5px; text-decoration-color:var(--hair);}
+.panel-list a:hover{text-decoration-color:var(--indigo-soft);}
+
+/* No-JS / plain fallback: shown when JS hasn't run */
+.plain-index{border-top:1px solid var(--hair); margin-top:18px;}
+.js .plain-index{display:none;}
+.plain-area{padding:22px 0; border-bottom:1px solid var(--hair);}
+.plain-area h2{font-size:1.2rem; margin-bottom:6px;}
+.plain-area .topics{font-family:var(--mono); font-size:12.5px; color:var(--soft); max-width:none;}
+
+/* Mobile: native accordion instead of the graph, no JS required */
+.accordion{display:none;}
+.acc-item{border-bottom:1px solid var(--hair);}
+.acc-item:first-child{border-top:1px solid var(--hair);}
+.acc-item summary{font-family:var(--sans); font-weight:600; font-size:14.5px; letter-spacing:.02em; padding:16px 2px; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;}
+.acc-item summary::-webkit-details-marker{display:none;}
+.acc-item summary::after{content:"+"; font-family:var(--mono); font-size:18px; color:var(--indigo);}
+.acc-item[open] summary::after{content:"–";}
+.acc-body{padding:0 2px 18px;}
+.acc-body p{font-size:.98rem;}
+
+/* ---------- Sections ---------- */
+section{padding:64px 0;}
+.wrap > section + section{border-top:1px solid var(--hair);}
+.split{display:grid; grid-template-columns:180px minmax(0,1fr); column-gap:52px;}
+.split > h2{grid-column:1; grid-row:1 / span 40; align-self:start; position:sticky; top:90px;
+  font-family:var(--mono); font-size:12.5px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); line-height:1.45;}
 .split > *:not(h2){grid-column:2;}
-.lede{max-width:62ch; font-size:1.18rem; color:var(--ink);}
-.subhead{margin:56px 0 20px; font-size:1.5rem;}
+.lede{max-width:62ch; font-size:1.1rem; color:var(--ink);}
 
-.focus-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:36px;}
-.focus-item{border-top:1px solid var(--ink); padding-top:14px;}
-.focus-item h3{font-size:1.2rem; margin-bottom:6px;}
-.focus-item p{font-size:.98rem; margin:0;}
-
-/* ---------- Publications: the card drawer ---------- */
-.pub-kicker{font-family:var(--type); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); max-width:none; margin:2px 0 10px;}
+/* ---------- Catalogue zone (kept, scoped) ---------- */
+.catalogue-zone{background:var(--cat-page); margin:0 calc(50% - 50vw); padding:64px calc(50vw - 50%);}
+.catalogue-zone .split > h2{color:var(--cat-red); opacity:.85;}
+.catalogue-zone .split > h2::before{content:""; display:block; width:28px; height:3px; background:var(--cat-red); margin-bottom:10px;}
+.pub-kicker{font-family:var(--type); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--cat-red); max-width:none; margin:2px 0 10px;}
 .pub-note{font-family:var(--type); font-size:13.5px; color:var(--soft); max-width:none; margin-bottom:22px;}
 .tabs-row{display:none;}
 .js .tabs-row{display:flex; flex-wrap:wrap; gap:4px; align-items:flex-end; padding-left:14px; position:relative; z-index:1;}
-.tab{position:relative; top:1px; font-family:var(--type); font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); background:#F3EFE1; border:1px solid var(--tray-edge); border-bottom:none; border-radius:7px 7px 0 0; padding:9px 15px 8px; cursor:pointer;}
+.tab{position:relative; top:1px; font-family:var(--type); font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); background:#F3EFE1; border:1px solid var(--cat-tray-edge); border-bottom:none; border-radius:7px 7px 0 0; padding:9px 15px 8px; cursor:pointer;}
 .tab:hover{background:#FAF7EC;}
-.tab .n{color:var(--red); font-weight:700; margin-left:6px;}
-.tab[aria-pressed="true"]{background:var(--tray); font-weight:700; padding-bottom:11px; z-index:2;}
-.drawer{background:var(--tray); border:1px solid var(--tray-edge); padding:34px 24px 34px 0; display:flex; flex-direction:column; align-items:center; gap:28px;}
+.tab .n{color:var(--cat-red); font-weight:700; margin-left:6px;}
+.tab[aria-pressed="true"]{background:var(--cat-tray); font-weight:700; padding-bottom:11px; z-index:2;}
+.drawer{background:var(--cat-tray); border:1px solid var(--cat-tray-edge); padding:34px 24px 34px 0; display:flex; flex-direction:column; align-items:center; gap:28px;}
 
-/* The card: 125 x 75 mm (5:3). On screen 1.4x that; in print exactly 125 x 75 mm. */
-.card-wrap{container-type:inline-size; width:min(100%,175mm);}
+.card-wrap{container-type:inline-size; width:min(100%,175mm); scroll-margin-top:100px;}
 .card-wrap[hidden]{display:none;}
 .card{position:relative; aspect-ratio:5/3; font-family:var(--type); --lh:1.5; font-size:15px; font-size:max(2.232cqw,10.4px); line-height:var(--lh); color:var(--ink);
-  background:var(--card); border:1px solid rgba(29,27,23,.18); border-radius:.5em;
+  background:var(--cat-card); border:1px solid rgba(29,27,23,.18); border-radius:.5em;
   box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 7px 14px -9px rgba(29,27,23,.55); font-variant-ligatures:none;
-  transition:transform .15s ease, box-shadow .15s ease;}
+  transition:transform .15s ease, box-shadow .15s ease, outline-color .2s ease;
+  outline:3px solid transparent; outline-offset:3px;}
+.card-wrap:target .card{outline-color:var(--indigo);}
 .card.linked, .card.linked .card-body{cursor:pointer;}
 .card:hover{transform:translateY(-3px); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 12px 20px -10px rgba(29,27,23,.6);}
 @media (prefers-reduced-motion:reduce){.card{transition:none;} .card:hover{transform:none;}}
 .card::before{content:""; position:absolute; left:0; right:0; top:3.4em; bottom:0; border-radius:0 0 .5em .5em;
-  background:linear-gradient(var(--red),var(--red)) 0 0 / 100% .11em no-repeat,
-             repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--lh)*1em - 1px), var(--rule-blue) calc(var(--lh)*1em - 1px), var(--rule-blue) calc(var(--lh)*1em));
+  background:linear-gradient(var(--cat-red),var(--cat-red)) 0 0 / 100% .11em no-repeat,
+             repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--lh)*1em - 1px), var(--cat-rule-blue) calc(var(--lh)*1em - 1px), var(--cat-rule-blue) calc(var(--lh)*1em));
   background-position:0 0, 0 .1em; opacity:.85; pointer-events:none;}
 .card::after{content:""; position:absolute; left:50%; bottom:7.5cqw; width:5cqw; height:5cqw; margin-left:-2.5cqw; border-radius:50%;
-  background:var(--tray); box-shadow:inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.4);}
+  background:var(--cat-tray); box-shadow:inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.4);}
 .card-top{position:absolute; left:2.4em; right:2.4em; top:.75em; height:2.4em;}
 .acc{font-weight:700; letter-spacing:.05em;}
 .stamp{position:absolute; right:0; top:-.1em; transform:rotate(-5deg); font-weight:700; letter-spacing:.14em; font-size:.92em; line-height:1.3;
-  color:var(--red); border:.16em solid currentColor; border-radius:.2em; padding:.05em .55em .05em .7em; opacity:.88; mix-blend-mode:multiply;}
+  color:var(--cat-red); border:.16em solid currentColor; border-radius:.2em; padding:.05em .55em .05em .7em; opacity:.88; mix-blend-mode:multiply;}
 .card-body{position:absolute; left:2.4em; right:2.4em; top:3.5em; bottom:13cqw; overflow:hidden;}
 .card-body p{margin:0; max-width:none; color:var(--ink);}
-.card-body a{text-decoration-color:var(--red);}
+.card-body a{text-decoration-color:var(--cat-red);}
 .entry{margin-left:.8em;}
 .desc,.note,.tracings{margin-left:.8em; text-indent:3ch;}
 .note{color:var(--soft);}
 .tracings{color:var(--soft);}
 .brief{display:none;}
-/* Small cards (phones): compact record so nothing is clipped. Same 5:3 shape, same fields, optional detail dropped. */
 @container (max-width:470px){
   .card{--lh:1.4;}
   .tracings,.opt,.full{display:none;}
@@ -148,93 +191,106 @@ section{padding:72px 0;}
 
 /* ---------- Projects: quiet ruled list ---------- */
 .proj-list{margin-top:8px;}
-.proj{display:grid; grid-template-columns:210px minmax(0,1fr) auto; gap:8px 28px; padding:22px 0; border-top:1px solid var(--hair); align-items:start;}
+.proj{display:grid; grid-template-columns:210px minmax(0,1fr) auto; gap:8px 28px; padding:22px 0; border-top:1px solid var(--hair); align-items:start; scroll-margin-top:100px;}
 .proj:first-child{border-top-color:var(--ink);}
-.proj-name{font-family:var(--type); font-weight:700; font-size:16px;}
+.proj:target{background:rgba(72,83,140,.05);}
+.proj-name{font-family:var(--mono); font-weight:500; font-size:15px;}
 .proj-dl{display:grid; grid-template-columns:repeat(3,1fr); gap:6px 22px; margin:0;}
-.proj-dl dt{font-family:var(--type); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--red);}
+.proj-dl dt{font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--indigo);}
 .proj-dl dd{margin:0; font-size:.95rem; line-height:1.45; color:var(--soft);}
-.proj-link{font-family:var(--type); font-size:13.5px; white-space:nowrap;}
+.proj-link{font-family:var(--sans); font-weight:600; font-size:13px; white-space:nowrap;}
 
-/* ---------- Research visit ---------- */
-.area{padding:26px 0; border-top:1px solid var(--hair);}
-.area:first-of-type{border-top:none; padding-top:6px;}
-.lede + .area{margin-top:26px;}
-.area h3{font-size:1.35rem; margin-bottom:6px;}
-.topics{font-family:var(--type); font-size:13.5px; color:var(--soft); max-width:none; margin:10px 0 0;}
-.contrib-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px 40px;}
-.contrib{border-top:1px solid var(--ink); padding-top:12px;}
-.contrib h3{font-size:1.1rem; margin-bottom:4px;}
-.contrib p{margin:0; font-size:.98rem;}
-.concept{padding:22px 0; border-top:1px solid var(--hair);}
-.concept-tag{display:block; font-family:var(--type); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin-bottom:6px;}
-.concept h3{font-size:1.2rem; margin-bottom:4px;}
-.concept p{margin:0; font-size:1rem;}
+/* ---------- About ---------- */
+.about-grid{display:grid; grid-template-columns:1fr 220px; gap:40px; align-items:start;}
+.about-portrait{margin:0; background:var(--panel); padding:8px; border:1px solid var(--hair);}
+.about-portrait img{width:100%; aspect-ratio:4/4.6; object-fit:cover; object-position:center 12%;}
+.about-portrait figcaption{font-family:var(--mono); font-size:11px; color:var(--soft); padding:8px 2px 0;}
+.timeline{margin:10px 0 0; padding:0; list-style:none;}
+.timeline li{display:grid; grid-template-columns:130px 1fr; gap:18px; padding:13px 0; border-top:1px solid var(--hair);}
+.timeline li:first-child{border-top-color:var(--ink);}
+.timeline .yr{font-family:var(--mono); font-size:13px; color:var(--soft); padding-top:2px;}
+.timeline .what strong{font-weight:600;}
+.timeline .what span{display:block; font-size:.92rem; color:var(--soft);}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr;} .about-portrait{max-width:220px;}}
 
-/* ---------- Education / recognition ---------- */
-.edu-item{display:grid; grid-template-columns:170px minmax(0,1fr); gap:20px; padding:16px 0; border-top:1px solid var(--hair);}
-h2 + .edu-item{border-top-color:var(--ink);}
-.edu-date{font-family:var(--type); font-size:13.5px; color:var(--soft); padding-top:3px;}
-.edu-title{font-weight:600; font-size:1.08rem;}
-.edu-sub{color:var(--soft); font-size:.95rem;}
-.plain-list{margin:0; padding:0; list-style:none;}
-.plain-list li{padding:14px 0; border-top:1px solid var(--hair); color:var(--soft);}
-.plain-list li:first-child{border-top-color:var(--ink);}
-.plain-list strong{color:var(--ink); font-weight:600;}
+/* ---------- Milestones (was: Recognition list) ---------- */
+.milestones{margin:0; padding:0; list-style:none; display:flex; flex-direction:column;}
+.milestones li{display:grid; grid-template-columns:80px 1fr; gap:20px; padding:14px 0; border-top:1px solid var(--hair);}
+.milestones li:first-child{border-top-color:var(--ink);}
+.milestones .yr{font-family:var(--mono); font-size:13px; color:var(--indigo); padding-top:2px;}
+.milestones strong{font-weight:600;}
+
+/* ---------- Collaborate ---------- */
+.area-card{padding:24px 0; border-top:1px solid var(--hair);}
+.area-card:first-of-type{border-top:none; padding-top:4px;}
+.area-card h3{font-size:1.2rem; margin-bottom:6px;}
+.topics{font-family:var(--mono); font-size:13px; color:var(--soft); max-width:none; margin:8px 0 0;}
+.contrib-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px 36px; margin-top:8px;}
+.contrib{border-top:1px solid var(--ink); padding-top:10px;}
+.contrib h3{font-size:1.05rem; margin-bottom:4px;}
+.contrib p{margin:0; font-size:.96rem;}
+.btn{display:inline-block; font-family:var(--sans); font-weight:600; font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; line-height:1.2; padding:13px 20px; border:1.5px solid var(--ink); text-decoration:none;}
+.btn-primary{background:var(--ink); color:#fff;}
+.btn-primary:hover{background:var(--indigo); border-color:var(--indigo); color:#fff; text-decoration:none;}
+.btn-outline{background:transparent; color:var(--ink);}
+.btn-outline:hover{background:var(--ink); color:#fff; text-decoration:none;}
+.cta-row{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 4px;}
 
 /* ---------- Contact ---------- */
-#contact{border-top:1px solid var(--ink); padding:80px 0 88px;}
-#contact h2{font-size:clamp(2rem,4.4vw,3rem); font-weight:500; letter-spacing:-.012em; max-width:22ch; margin-bottom:18px;}
-.contact-links{display:flex; flex-wrap:wrap; gap:8px 24px; margin:22px 0 30px; font-family:var(--type); font-size:14px;}
-footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
-.footer-note{font-family:var(--type); font-size:12.5px; letter-spacing:.03em; color:var(--soft); margin:0; max-width:none;}
+#contact{border-top:1px solid var(--ink); padding:72px 0 84px;}
+#contact h2{font-size:clamp(1.9rem,4vw,2.7rem); font-weight:500; letter-spacing:-.01em; max-width:22ch; margin-bottom:16px;}
+.contact-links{display:flex; flex-wrap:wrap; gap:8px 22px; margin:20px 0 26px; font-family:var(--mono); font-size:13.5px;}
+footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
+.footer-note{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:var(--soft); margin:0; max-width:none;}
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr; gap:40px; align-items:start;}
-  .portrait{max-width:340px;}
   .split{display:block;}
-  .split > h2{position:static; margin-bottom:24px;}
-  .focus-grid{grid-template-columns:1fr;}
+  .split > h2{position:static; margin-bottom:20px;}
   .proj{grid-template-columns:1fr;}
   .proj-dl{grid-template-columns:1fr;}
-  .rindex-inner{grid-template-columns:1fr;}
-  .rindex a{border-left:none; border-top:1px solid var(--hair);}
-  .rindex a:first-child{border-top:none;}
+  .contrib-grid{grid-template-columns:1fr;}
+}
+@media (min-width:861px){
+  #nav-toggle{visibility:hidden;}
 }
 @media (max-width:860px){
-  .tabs{position:absolute; top:64px; left:0; right:0; background:var(--page); flex-direction:column; align-items:stretch; gap:0; border-bottom:1px solid var(--ink); display:none;}
+  .tabs{position:absolute; top:62px; left:0; right:0; background:var(--page); flex-direction:column; align-items:stretch; gap:0; border-bottom:1px solid var(--ink); display:none;}
   .tabs li{border-top:1px solid var(--hair);}
   .tabs li:first-child{border-top:none;}
-  .tabs a{display:block; padding:15px 32px; border-bottom:none;}
+  .tabs a{display:block; padding:14px 32px; border-bottom:none;}
   #nav-toggle:checked ~ .tabs{display:flex;}
   .burger{display:block;}
 }
-@media (max-width:640px){
+/* Below this width: graph becomes an accordion, always, JS or not. */
+@media (max-width:760px){
+  .js .graph-shell, .graph-shell{display:none !important;}
+  .plain-index{display:none !important;}
+  .accordion{display:block;}
   body{font-size:17px;}
   .wrap,.nav-inner{padding-left:20px; padding-right:20px;}
   .tabs a{padding-left:20px; padding-right:20px;}
-  section{padding:56px 0;}
+  section{padding:52px 0;}
+  .catalogue-zone{padding-left:0; padding-right:0;}
   .drawer{padding:22px 8px 22px 0;}
   .js .tabs-row{padding-left:0; gap:6px; margin-bottom:12px;}
-  .tab{top:0; border:1px solid var(--tray-edge); border-radius:5px; padding:8px 12px;}
+  .tab{top:0; border:1px solid var(--cat-tray-edge); border-radius:5px; padding:8px 12px;}
   .tab[aria-pressed="true"]{padding-bottom:8px;}
-  .contrib-grid{grid-template-columns:1fr;}
-  .edu-item{grid-template-columns:1fr; gap:4px;}
 }
 
-/* ---------- Print: cards at true size, 125 x 75 mm, two per row on A4 landscape ---------- */
+/* ---------- Print: catalogue cards at true size ---------- */
 @page{size:A4 landscape; margin:10mm;}
 @media print{
-  :root{--tray:#fff; --page:#fff;}
+  :root{--cat-tray:#fff; --cat-page:#fff; --page:#fff;}
   body{background:#fff;}
-  nav,.skip,.hero,#research,#projects,#research-visit,#about,#recognition,#contact,footer,.tabs-row,.pub-note,.split > h2{display:none !important;}
+  nav,.skip,.intro,.network,#about,#recognition,#collaborate,#contact,footer,.tabs-row,.pub-note,.split > h2{display:none !important;}
   main,.wrap{display:block; max-width:none; padding:0;}
+  .catalogue-zone{margin:0; padding:0;}
   #publications{display:block !important; padding:0; border:0;}
   .drawer{background:none; border:0; padding:0; box-shadow:none; display:grid; grid-template-columns:repeat(2,125mm); gap:8mm; justify-content:center;}
   .card-wrap[hidden]{display:block;}
   .card-wrap{width:125mm; break-inside:avoid;}
-  .card{box-shadow:none; border:.25mm solid #888; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .card{box-shadow:none; border:.25mm solid #888; outline:none; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .card:hover{transform:none;}
   .card::after{box-shadow:inset 0 0 0 .25mm #888;}
   a{text-decoration:none;}
@@ -247,103 +303,102 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
 
 <nav>
   <div class="nav-inner">
-    <a href="#top" class="nav-name">Kumar Sumit</a>
+    <a href="#top" class="nav-name">KUMAR SUMIT</a>
     <input type="checkbox" id="nav-toggle" aria-label="Toggle menu">
     <label for="nav-toggle" class="burger">Menu</label>
     <ul class="tabs">
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#network">Research</a></li>
+      <li><a href="#publications">Work</a></li>
       <li><a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener">CV</a></li>
-      <li><a href="#research-visit" class="cta">Research visit</a></li>
+      <li><a href="#collaborate" class="cta">Collaborate</a></li>
     </ul>
   </div>
 </nav>
 
 <main id="main">
 
-<div id="top" class="wrap hero">
-  <div class="hero-grid">
-    <div>
-      <p class="kicker">PhD researcher · Mizoram University</p>
-      <h1 class="name">Kumar Sumit</h1>
-      <p class="role">AI · Semantic Retrieval · Knowledge Organization</p>
-      <p class="statement">
-        I develop computational approaches for representing, retrieving, organizing, and evaluating
-        scholarly and cultural knowledge, with particular interests in semantic search, multilingual
-        information access, and scholarly communication.
-      </p>
-      <p class="seeking">Open for research visits and collaborations</p>
-      <div class="cta-row">
-        <a href="#research-visit" class="btn btn-primary">Research visit</a>
-        <a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
-      </div>
-      <div class="link-row">
-        <a href="https://www.researchgate.net/profile/Kumar-Sumit-6" target="_blank" rel="noopener">ResearchGate</a>
-        <a href="https://scholar.google.com/citations?user=8TjJp0sAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://orcid.org/0009-0007-6298-2133" target="_blank" rel="noopener">ORCID</a>
-        <a href="mailto:aryan.sumit121@gmail.com">Email</a>
-      </div>
-    </div>
-    <figure class="portrait">
-      <img src="portrait_final.jpg" alt="Portrait of Kumar Sumit">
-      <figcaption>Dept. of Library and Information Science, Mizoram University</figcaption>
-    </figure>
+<div id="top" class="wrap intro">
+  <p class="intro-kicker">PhD researcher · Mizoram University</p>
+  <h1>Kumar Sumit</h1>
+  <p class="role">AI &middot; Semantic Retrieval &middot; Knowledge Organization</p>
+  <div class="intro-links">
+    <a href="https://www.researchgate.net/profile/Kumar-Sumit-6" target="_blank" rel="noopener">ResearchGate</a>
+    <a href="https://scholar.google.com/citations?user=8TjJp0sAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://orcid.org/0009-0007-6298-2133" target="_blank" rel="noopener">ORCID</a>
+    <a href="mailto:aryan.sumit121@gmail.com">Email</a>
   </div>
 </div>
 
-<nav class="rindex" aria-label="Research index">
-  <div class="wrap rindex-inner">
-    <a href="#idx-retrieval">
-      <span class="no">01</span>
-      <span class="lbl">Semantic retrieval</span>
-      <span class="sub">retrieval &middot; embeddings &middot; RAG &middot; evaluation</span>
-    </a>
-    <a href="#idx-knowledge">
-      <span class="no">02</span>
-      <span class="lbl">Knowledge organization</span>
-      <span class="sub">ontologies &middot; knowledge graphs &middot; multilingual access</span>
-    </a>
-    <a href="#idx-scholarly">
-      <span class="no">03</span>
-      <span class="lbl">Scholarly communication</span>
-      <span class="sub">bibliometrics &middot; scientometrics &middot; citation analysis</span>
-    </a>
-  </div>
-</nav>
-
-<div class="wrap">
-
-<section id="research" class="split">
-  <h2>Current research</h2>
-  <p class="lede">
-    My current work centres on the Indigenous Semantic Retrieval Gap — the observation that mainstream
-    semantic retrieval systems are trained and evaluated almost entirely on high-resource languages,
-    leaving multilingual and Indigenous-language library collections poorly served. I am developing and
-    evaluating retrieval methods for this gap (filed for copyright protection, Diary No. LD-25312/2026-CO),
-    extending this into hybrid semantic retrieval for electronic thesis and dissertation discovery, and a
-    multilingual semantic OPAC module for the Scheduled Languages of India. In parallel, I use computational
-    and bibliometric methods to study how AI governance is discussed in policy documents and scholarly
-    literature.
-  </p>
-  <div class="focus-grid">
-    <div class="focus-item" id="idx-retrieval">
-      <h3>Semantic &amp; AI-based retrieval</h3>
-      <p>Semantic search, embeddings, retrieval-augmented generation, and retrieval evaluation.</p>
+<section id="network" class="network">
+  <div class="wrap">
+    <div class="network-head">
+      <p class="network-label">Research network — click an area to explore</p>
+      <button type="button" class="overview-btn" id="overview-btn" hidden>&larr; Overview</button>
     </div>
-    <div class="focus-item" id="idx-knowledge">
-      <h3>Knowledge organization</h3>
-      <p>Ontologies, knowledge graphs, multilingual and Indigenous information access.</p>
+
+    <!-- JS-enhanced: fixed-position graph. Node positions are hand-set per state, not simulated,
+         so every state is a known, tested layout rather than something a physics engine improvises. -->
+    <div class="graph-shell">
+      <div class="graph-stage" id="graph-stage" role="group" aria-label="Research network diagram">
+        <svg id="graph-edges" aria-hidden="true"></svg>
+        <!-- nodes injected by JS -->
+      </div>
+      <div class="panel" id="graph-panel" aria-live="polite">
+        <!-- filled by JS -->
+      </div>
     </div>
-    <div class="focus-item" id="idx-scholarly">
-      <h3>Scholarly communication</h3>
-      <p>Bibliometrics, scientometrics, citation analysis, and research evaluation.</p>
+
+    <!-- No-JS fallback: the same three areas as a plain, always-visible list -->
+    <div class="plain-index">
+      <div class="plain-area">
+        <h2>Semantic &amp; AI-based retrieval</h2>
+        <p>Retrieval systems that understand meaning rather than matching keywords — spanning the Indigenous Semantic Retrieval Gap, dense embeddings, retrieval-augmented generation, and rigorous evaluation.</p>
+        <p class="topics">Indigenous Semantic Retrieval Gap &middot; MizBERT &amp; BGE-M3 &middot; Retrieval-augmented generation &middot; Semantic Workbench &amp; multilingual OPAC</p>
+      </div>
+      <div class="plain-area">
+        <h2>Knowledge organization</h2>
+        <p>Representing and connecting knowledge across languages and resource levels — ontologies, knowledge graphs, and multilingual access, with attention to Indigenous knowledge organization.</p>
+        <p class="topics">Ontologies &middot; Knowledge graphs &middot; Indigenous knowledge organization &middot; Multilingual access</p>
+      </div>
+      <div class="plain-area">
+        <h2>Scholarly communication</h2>
+        <p>Computational and quantitative methods for understanding how scholarly knowledge is produced, cited, and evaluated.</p>
+        <p class="topics">Bibliometrics &middot; Scientometrics &middot; Citation analysis &middot; AI governance discourse</p>
+      </div>
+    </div>
+
+    <!-- Mobile: native accordion, works with or without JS -->
+    <div class="accordion">
+      <details class="acc-item" open>
+        <summary>Semantic &amp; AI-based retrieval</summary>
+        <div class="acc-body">
+          <p>Retrieval systems that understand meaning rather than matching keywords — spanning the Indigenous Semantic Retrieval Gap, dense embeddings, retrieval-augmented generation, and rigorous evaluation.</p>
+          <p class="topics">Indigenous Semantic Retrieval Gap &middot; MizBERT &amp; BGE-M3 &middot; Retrieval-augmented generation &middot; Semantic Workbench &amp; multilingual OPAC</p>
+        </div>
+      </details>
+      <details class="acc-item">
+        <summary>Knowledge organization</summary>
+        <div class="acc-body">
+          <p>Representing and connecting knowledge across languages and resource levels — ontologies, knowledge graphs, and multilingual access, with attention to Indigenous knowledge organization.</p>
+          <p class="topics">Ontologies &middot; Knowledge graphs &middot; Indigenous knowledge organization &middot; Multilingual access</p>
+        </div>
+      </details>
+      <details class="acc-item">
+        <summary>Scholarly communication</summary>
+        <div class="acc-body">
+          <p>Computational and quantitative methods for understanding how scholarly knowledge is produced, cited, and evaluated.</p>
+          <p class="topics">Bibliometrics &middot; Scientometrics &middot; Citation analysis &middot; AI governance discourse</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
 
-<section id="publications" class="split">
+<div class="wrap">
+
+<section id="publications" class="catalogue-zone">
+  <div class="split">
   <h2>Research outputs</h2>
   <p class="pub-kicker">Research Index · KS-2026</p>
   <p class="pub-note"><span id="pub-total">13</span> records, each set as a standard catalogue card (125 × 75 mm). Click a card to open the paper. Print this page to get the cards at true size (A4 landscape).</p>
@@ -363,10 +418,12 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       TO ADD A PUBLICATION: copy one whole <article class="card-wrap"> ... </article> block, paste it where it
       should appear, and edit it. Tab counts and the record total update by themselves.
       data-kind is one of: article, proceedings, preprint, accepted.
-      Accession IDs (KS-YYYY-NN) are permanent. Give a new item the next number and never reuse one.
+      Accession IDs (KS-YYYY-NN) are permanent and also used as anchor ids (id="ks-2026-01" etc) so the
+      research-network panel can link straight to a card. Give a new item the next number, id it to match,
+      and never reuse a number once assigned.
 
       TEMPLATE (published item):
-      <article class="card-wrap" data-kind="article"><div class="card">
+      <article class="card-wrap" data-kind="article" id="ks-2026-14"><div class="card">
         <div class="card-top"><span class="acc">KS-2026-14</span></div>
         <div class="card-body">
           <p class="entry">Surname, X.</p>
@@ -381,7 +438,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       WHEN IT IS PUBLISHED: change data-kind, delete the stamp, add the link and imprint, keep the same ID.
     -->
 
-    <article class="card-wrap" data-kind="article"><div class="card">
+    <article class="card-wrap" data-kind="article" id="ks-2026-01"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-01</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -391,7 +448,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="article"><div class="card">
+    <article class="card-wrap" data-kind="article" id="ks-2026-02"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-02</span></div>
       <div class="card-body">
         <p class="entry">Buragohain, P.</p>
@@ -400,7 +457,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="article"><div class="card">
+    <article class="card-wrap" data-kind="article" id="ks-2026-03"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-03</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -409,7 +466,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="proceedings"><div class="card">
+    <article class="card-wrap" data-kind="proceedings" id="ks-2026-04"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-04</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -419,7 +476,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="proceedings"><div class="card">
+    <article class="card-wrap" data-kind="proceedings" id="ks-2026-05"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-05</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -429,7 +486,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="proceedings"><div class="card">
+    <article class="card-wrap" data-kind="proceedings" id="ks-2026-06"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-06</span></div>
       <div class="card-body">
         <p class="entry">Barman, P.</p>
@@ -439,7 +496,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="preprint"><div class="card">
+    <article class="card-wrap" data-kind="preprint" id="ks-2026-07"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-07</span></div>
       <div class="card-body">
         <p class="entry">Kalita, A.</p>
@@ -448,7 +505,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="accepted"><div class="card">
+    <article class="card-wrap" data-kind="accepted" id="ks-2026-08"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-08</span><span class="stamp">ACCEPTED</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -458,7 +515,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="accepted"><div class="card">
+    <article class="card-wrap" data-kind="accepted" id="ks-2026-09"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-09</span><span class="stamp">ACCEPTED</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -468,7 +525,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="accepted"><div class="card">
+    <article class="card-wrap" data-kind="accepted" id="ks-2026-10"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-10</span><span class="stamp">ACCEPTED</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -478,7 +535,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="accepted"><div class="card">
+    <article class="card-wrap" data-kind="accepted" id="ks-2026-11"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-11</span><span class="stamp">ACCEPTED</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -488,7 +545,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="accepted"><div class="card">
+    <article class="card-wrap" data-kind="accepted" id="ks-2026-12"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-12</span><span class="stamp">ACCEPTED</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -498,7 +555,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </div>
     </div></article>
 
-    <article class="card-wrap" data-kind="accepted"><div class="card">
+    <article class="card-wrap" data-kind="accepted" id="ks-2026-13"><div class="card">
       <div class="card-top"><span class="acc">KS-2026-13</span><span class="stamp">ACCEPTED</span></div>
       <div class="card-body">
         <p class="entry">Sumit, K.</p>
@@ -509,13 +566,14 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
     </div></article>
 
   </div>
+  </div>
 </section>
 
 <section id="projects" class="split">
-  <h2>Research &amp; technical projects</h2>
-  <p>Computational projects supporting the research above. Full code on <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>.</p>
+  <h2>Projects &amp; code</h2>
+  <p>All six research projects, in full. Some are referenced from the network above; all are on <a href="https://github.com/aryansumit121-ctrl" target="_blank" rel="noopener">GitHub</a>.</p>
   <div class="proj-list">
-    <div class="proj">
+    <div class="proj" id="proj-isrg">
       <div class="proj-name">ISRG</div>
       <dl class="proj-dl">
         <div><dt>Research problem</dt><dd>Retrieval quality for multilingual, low-resource library collections</dd></div>
@@ -524,7 +582,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </dl>
       <a class="proj-link" href="https://github.com/Library-sssm/ISRG" target="_blank" rel="noopener">View code</a>
     </div>
-    <div class="proj">
+    <div class="proj" id="proj-rag">
       <div class="proj-name">RAG_final</div>
       <dl class="proj-dl">
         <div><dt>Research problem</dt><dd>Document and library discovery beyond keyword matching</dd></div>
@@ -533,7 +591,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </dl>
       <a class="proj-link" href="https://github.com/Library-sssm/RAG_final" target="_blank" rel="noopener">View code</a>
     </div>
-    <div class="proj">
+    <div class="proj" id="proj-workbench">
       <div class="proj-name">semanticwork_workbench</div>
       <dl class="proj-dl">
         <div><dt>Research problem</dt><dd>Comparing semantic search model behaviour</dd></div>
@@ -542,7 +600,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </dl>
       <a class="proj-link" href="https://github.com/Library-sssm/semanticwork_workbench" target="_blank" rel="noopener">View code</a>
     </div>
-    <div class="proj">
+    <div class="proj" id="proj-ontology">
       <div class="proj-name">ontology</div>
       <dl class="proj-dl">
         <div><dt>Research problem</dt><dd>Representing knowledge structures for organization schemas</dd></div>
@@ -551,7 +609,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </dl>
       <a class="proj-link" href="https://github.com/Library-sssm/ontology" target="_blank" rel="noopener">View code</a>
     </div>
-    <div class="proj">
+    <div class="proj" id="proj-lda">
       <div class="proj-name">lda-topicmodeling</div>
       <dl class="proj-dl">
         <div><dt>Research problem</dt><dd>Identifying latent themes in bibliometric corpora</dd></div>
@@ -560,7 +618,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       </dl>
       <a class="proj-link" href="https://github.com/aryansumit121-ctrl/lda-topicmodeling" target="_blank" rel="noopener">View code</a>
     </div>
-    <div class="proj">
+    <div class="proj" id="proj-sentiment">
       <div class="proj-name">sentiment_analyser</div>
       <dl class="proj-dl">
         <div><dt>Research problem</dt><dd>Measuring sentiment in scholarly and discourse text</dd></div>
@@ -572,31 +630,65 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
   </div>
 </section>
 
-<section id="research-visit" class="split">
-  <h2>Research visit</h2>
+<section id="about" class="split">
+  <h2>About</h2>
+  <div class="about-grid">
+    <div>
+      <p class="lede">
+        I develop computational approaches for representing, retrieving, organizing, and evaluating
+        scholarly and cultural knowledge, with particular interests in semantic search, multilingual
+        information access, and scholarly communication. I'm currently a PhD researcher in the
+        Department of Library and Information Science at Mizoram University.
+      </p>
+      <ul class="timeline">
+        <li><span class="yr">2025 —</span><span class="what"><strong>Ph.D., Library and Information Science</strong><span>Mizoram University · in progress</span></span></li>
+        <li><span class="yr">2023–25</span><span class="what"><strong>MLISc</strong><span>Banaras Hindu University · 77%</span></span></li>
+        <li><span class="yr">2015–18</span><span class="what"><strong>B.A., Geography</strong><span>Banaras Hindu University · 72.5%</span></span></li>
+      </ul>
+    </div>
+    <figure class="about-portrait">
+      <img src="portrait_final.jpg" alt="Portrait of Kumar Sumit">
+      <figcaption>Dept. of Library and Information Science, Mizoram University</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="recognition" class="split">
+  <h2>Milestones</h2>
+  <ul class="milestones">
+    <li><span class="yr">2026</span><span><strong>UGC-NET JRF</strong> — 99.908 percentile, Junior Research Fellowship</span></li>
+    <li><span class="yr">2026</span><span><strong>Copyright filed</strong> — Diary No. LD-25312/2026-CO, Indigenous Semantic Retrieval Gap methodology</span></li>
+    <li><span class="yr">2026</span><span><strong>IFLA WLIC</strong> — abstract accepted for presentation</span></li>
+    <li><span class="yr">2026</span><span><strong>ASIST Annual Meeting</strong> — long paper, doctoral colloquium, and poster accepted</span></li>
+    <li><span class="yr">2026</span><span><strong>PLANNER</strong> — accepted for oral presentation, INFLIBNET Centre &amp; Gauhati University</span></li>
+  </ul>
+</section>
+
+<section id="collaborate" class="split">
+  <h2>Collaborate</h2>
   <p class="lede">
-    I am interested in visiting-researcher / visiting-scholar opportunities with universities, research
-    centres, libraries, and interdisciplinary research groups working at the intersection of AI, information
+    I am open for visiting-researcher / visiting-scholar opportunities with universities, research
+    centres, libraries, and interdisciplinary groups working at the intersection of AI, information
     science, knowledge organization, digital libraries, and scholarly communication.
   </p>
 
-  <div class="area">
+  <div class="area-card">
     <h3>Semantic &amp; AI-based information retrieval</h3>
     <p>Retrieval systems that understand meaning rather than matching keywords, and how to evaluate them rigorously.</p>
-    <p class="topics">Semantic search · Embeddings · Retrieval-augmented generation · Retrieval evaluation</p>
+    <p class="topics">Semantic search &middot; Embeddings &middot; Retrieval-augmented generation &middot; Retrieval evaluation</p>
   </div>
-  <div class="area">
+  <div class="area-card">
     <h3>Knowledge organization &amp; multilingual information access</h3>
     <p>Representing and connecting knowledge across languages and resource levels, including for Indigenous and cultural-heritage collections.</p>
-    <p class="topics">Ontologies · Knowledge graphs · Multilingual retrieval · Indigenous knowledge organization</p>
+    <p class="topics">Ontologies &middot; Knowledge graphs &middot; Multilingual retrieval &middot; Indigenous knowledge organization</p>
   </div>
-  <div class="area">
+  <div class="area-card">
     <h3>Scholarly communication &amp; research evaluation</h3>
     <p>Computational and quantitative methods for understanding how scholarly knowledge is produced, cited, and evaluated.</p>
-    <p class="topics">Bibliometrics · Scientometrics · Citation analysis · Research evaluation</p>
+    <p class="topics">Bibliometrics &middot; Scientometrics &middot; Citation analysis &middot; Research evaluation</p>
   </div>
 
-  <h3 class="subhead">What I can contribute</h3>
+  <h3 style="margin:40px 0 16px; font-size:1.3rem;">What I can contribute</h3>
   <div class="contrib-grid">
     <div class="contrib"><h3>Computational research</h3><p>Python, NLP, embeddings, semantic retrieval, retrieval-augmented generation, and topic modelling.</p></div>
     <div class="contrib"><h3>Research methods</h3><p>Bibliometrics, scientometrics, citation analysis, and statistical analysis (SPSS, R, VOSviewer).</p></div>
@@ -604,46 +696,10 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
     <div class="contrib"><h3>Research outputs</h3><p>Peer-reviewed publications, international conference contributions, open-source repositories, and a filed methodology.</p></div>
   </div>
 
-  <h3 class="subhead">Potential collaboration projects</h3>
-  <p>These are potential research directions building on my existing work, not claims of completed projects.</p>
-  <div class="concept">
-    <span class="concept-tag">Potential direction</span>
-    <h3>Semantic retrieval for multilingual, low-resource environments</h3>
-    <p>Extend my existing Indigenous Semantic Retrieval Gap work to a host institution's collections or languages.</p>
+  <div class="cta-row">
+    <a href="#contact" class="btn btn-primary">Get in touch</a>
+    <a href="Kumar_Sumit_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
   </div>
-  <div class="concept">
-    <span class="concept-tag">Potential direction</span>
-    <h3>AI-assisted scholarly knowledge discovery</h3>
-    <p>Investigate how embeddings and citation structures can improve scholarly discovery, building on my RAG and bibliometric work.</p>
-  </div>
-  <div class="concept">
-    <span class="concept-tag">Potential direction</span>
-    <h3>Knowledge graphs for library and cultural-heritage collections</h3>
-    <p>Explore computational representations connecting concepts, documents, and entities, drawing on my ontology work.</p>
-  </div>
-  <div class="concept">
-    <span class="concept-tag">Potential direction</span>
-    <h3>Computational analysis of scholarly communication</h3>
-    <p>Extend my published bibliometric and topic-modeling studies to new research-evaluation questions.</p>
-  </div>
-</section>
-
-<section id="about" class="split">
-  <h2>Education</h2>
-  <div class="edu-item"><div class="edu-date">2025 — Ongoing</div><div><div class="edu-title">Ph.D., Library and Information Science</div><div class="edu-sub">Mizoram University</div></div></div>
-  <div class="edu-item"><div class="edu-date">2023 – 2025</div><div><div class="edu-title">Master of Library and Information Science (MLISc)</div><div class="edu-sub">Banaras Hindu University · 77%</div></div></div>
-  <div class="edu-item"><div class="edu-date">2015 – 2018</div><div><div class="edu-title">Bachelor's Degree, Geography</div><div class="edu-sub">Banaras Hindu University · 72.5%</div></div></div>
-</section>
-
-<section id="recognition" class="split">
-  <h2>Recognition &amp; intellectual property</h2>
-  <ul class="plain-list">
-    <li><strong>UGC-NET JRF</strong> — 99.908 percentile, qualified for Junior Research Fellowship</li>
-    <li><strong>IFLA WLIC 2026</strong> — Abstract accepted for presentation</li>
-    <li><strong>ASIST Annual Meeting 2026</strong> — Long paper, Doctoral Colloquium, and Poster accepted</li>
-    <li><strong>Copyright filed</strong> — Diary No. LD-25312/2026-CO: Indigenous Semantic Retrieval Gap methodology</li>
-    <li><strong>Technical skills</strong> — Python, Streamlit, BERT, IndicBERT v2, MizBERT, SPSS, R, VOSviewer, Zotero</li>
-  </ul>
 </section>
 
 </div>
@@ -676,12 +732,13 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
 
 <script>
 (function(){
+  "use strict";
+
+  /* ---------------- Publications: unchanged from the catalogue build ---------------- */
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card-wrap'));
   var tabs  = Array.prototype.slice.call(document.querySelectorAll('.tab'));
   var count = document.getElementById('pub-count');
   var total = document.getElementById('pub-total');
-
-  // Counts update themselves, so adding or removing a card needs no other edit.
   var by = {};
   cards.forEach(function(c){ var k = c.getAttribute('data-kind'); by[k] = (by[k] || 0) + 1; });
   tabs.forEach(function(t){
@@ -691,8 +748,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
     t.hidden = (n === 0);
   });
   if (total) total.textContent = cards.length;
-
-  function show(kind){
+  function showKind(kind){
     var n = 0;
     cards.forEach(function(c){
       var on = (kind === 'all' || c.getAttribute('data-kind') === kind);
@@ -701,9 +757,7 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
     tabs.forEach(function(t){ t.setAttribute('aria-pressed', t.getAttribute('data-kind') === kind ? 'true' : 'false'); });
     if (count) count.textContent = 'Showing ' + n + ' of ' + cards.length + ' records';
   }
-  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.getAttribute('data-kind')); }); });
-
-  // The whole card is clickable when its title is a link. Real links and text selection still work normally.
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ showKind(t.getAttribute('data-kind')); }); });
   cards.forEach(function(w){
     var card = w.querySelector('.card');
     var a = card.querySelector('.desc a');
@@ -715,6 +769,159 @@ footer{border-top:1px solid var(--hair); padding:26px 0 44px;}
       a.click();
     });
   });
+
+  /* ---------------- Research network: fixed-position graph, four hand-authored states ---------------- */
+  var AREAS = {
+    retrieval: {
+      label: 'Semantic retrieval',
+      cx: 20, cy: 65,
+      leaves: [
+        {id:'isrg', label:'Indigenous\nRetrieval Gap', x:15, y:55},
+        {id:'embed', label:'MizBERT /\nBGE-M3', x:38, y:78},
+        {id:'rag', label:'Retrieval-\naugmented gen.', x:62, y:78},
+        {id:'owb', label:'Semantic\nWorkbench / OPAC', x:85, y:55}
+      ],
+      desc: 'Retrieval systems that understand meaning rather than matching keywords — the Indigenous Semantic Retrieval Gap in multilingual, low-resource library environments, dense embeddings, retrieval-augmented generation, and rigorous evaluation.',
+      work: [['ks-2026-08','KS-08 — Is Semantic Retrieval Enough?'],
+             ['ks-2026-13','KS-13 — Semantic Workbench'],
+             ['ks-2026-04','KS-04 — From keywords to connections'],
+             ['ks-2026-11','KS-11 — Multilingual semantic OPAC module'],
+             ['ks-2026-09','KS-09 — From metadata to knowledge graphs']],
+      code: [['proj-isrg','ISRG'], ['proj-rag','RAG_final'], ['proj-workbench','semanticwork_workbench']]
+    },
+    knowledge: {
+      label: 'Knowledge organization',
+      cx: 50, cy: 78,
+      leaves: [
+        {id:'onto', label:'Ontologies', x:15, y:55},
+        {id:'kg', label:'Knowledge\ngraphs', x:38, y:78},
+        {id:'ml', label:'Multilingual\naccess', x:62, y:78},
+        {id:'iko', label:'Indigenous\nknowledge org.', x:85, y:55}
+      ],
+      desc: 'Representing and connecting knowledge across languages and resource levels — ontologies and knowledge graphs, with particular attention to Indigenous knowledge organization and multilingual access.',
+      work: [['ks-2026-12','KS-12 — Bridging representation gaps'],
+             ['ks-2026-04','KS-04 — From keywords to connections']],
+      code: [['proj-ontology','ontology']]
+    },
+    scholarly: {
+      label: 'Scholarly communication',
+      cx: 80, cy: 65,
+      leaves: [
+        {id:'bib', label:'Bibliometrics', x:15, y:55},
+        {id:'sci', label:'Scientometrics', x:38, y:78},
+        {id:'cit', label:'Citation\nanalysis', x:62, y:78},
+        {id:'gov', label:'AI governance\ndiscourse', x:85, y:55}
+      ],
+      desc: 'Computational and quantitative methods for understanding how scholarly knowledge is produced, cited, and evaluated — including how AI governance itself is discussed in policy and scholarly literature.',
+      work: [['ks-2026-01','KS-01 — AI governance in scholarly publishing'],
+             ['ks-2026-03','KS-03 — AI governance as policy discourse'],
+             ['ks-2026-02','KS-02 — Mapping health crisis research'],
+             ['ks-2026-05','KS-05 — Sustainable agriculture discourse'],
+             ['ks-2026-06','KS-06 — Indian knowledge systems, agriculture'],
+             ['ks-2026-07','KS-07 — Does open access matter for citations?']],
+      code: [['proj-lda','lda-topicmodeling'], ['proj-sentiment','sentiment_analyser']]
+    }
+  };
+  var OVERVIEW_NODES = [
+    {id:'retrieval', label:'Semantic\nretrieval', x:20, y:65},
+    {id:'knowledge', label:'Knowledge\norganization', x:50, y:78},
+    {id:'scholarly', label:'Scholarly\ncommunication', x:80, y:65}
+  ];
+  var CENTER_OVERVIEW = {x:50, y:22, label:'Knowledge'};
+
+  var stage = document.getElementById('graph-stage');
+  var svg = document.getElementById('graph-edges');
+  var panel = document.getElementById('graph-panel');
+  var overviewBtn = document.getElementById('overview-btn');
+  if (!stage) return; // page has no graph (shouldn't happen, but keep this defensive)
+
+  function el(tag, attrs){
+    var n = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+  function multiline(container, text, cls){
+    var span = document.createElement('span');
+    span.className = cls;
+    text.split('\n').forEach(function(line, i){
+      if (i > 0) span.appendChild(document.createElement('br'));
+      span.appendChild(document.createTextNode(line));
+    });
+    container.appendChild(span);
+    return span;
+  }
+  function makeNode(x, y, kind, id){
+    var b = document.createElement(kind === 'leaf' || kind === 'center' ? 'div' : 'button');
+    if (kind !== 'leaf' && kind !== 'center') b.type = 'button';
+    b.className = 'node ' + kind;
+    b.style.left = x + '%'; b.style.top = y + '%';
+    if (id) b.dataset.id = id;
+    var dot = document.createElement('span'); dot.className = 'dot'; b.appendChild(dot);
+    return b;
+  }
+
+  function renderOverview(){
+    stage.querySelectorAll('.node').forEach(function(n){ n.remove(); });
+    svg.innerHTML = '';
+    if (overviewBtn) overviewBtn.hidden = true;
+
+    var center = makeNode(CENTER_OVERVIEW.x, CENTER_OVERVIEW.y, 'center');
+    multiline(center, CENTER_OVERVIEW.label, 'lbl');
+    stage.appendChild(center);
+
+    OVERVIEW_NODES.forEach(function(n){
+      var b = makeNode(n.x, n.y, 'area', n.id);
+      multiline(b, n.label, 'lbl');
+      b.setAttribute('aria-current', 'false');
+      b.addEventListener('click', function(){ renderArea(n.id); });
+      stage.appendChild(b);
+      svg.appendChild(el('line', {
+        x1: CENTER_OVERVIEW.x + '%', y1: CENTER_OVERVIEW.y + '%',
+        x2: n.x + '%', y2: n.y + '%'
+      }));
+    });
+
+    panel.innerHTML =
+      '<p class="panel-eyebrow">Overview</p>' +
+      '<h2>Three research areas</h2>' +
+      '<p class="desc">I develop computational approaches for representing, retrieving, organizing, and evaluating scholarly and cultural knowledge. Click a node to see how each area connects to specific work.</p>';
+  }
+
+  function renderArea(key){
+    var A = AREAS[key];
+    stage.querySelectorAll('.node').forEach(function(n){ n.remove(); });
+    svg.innerHTML = '';
+    if (overviewBtn) overviewBtn.hidden = false;
+
+    var cx = 50, cy = 20;
+    var center = makeNode(cx, cy, 'center');
+    multiline(center, A.label, 'lbl');
+    stage.appendChild(center);
+
+    A.leaves.forEach(function(lf){
+      var b = makeNode(lf.x, lf.y, 'leaf');
+      multiline(b, lf.label, 'lbl');
+      stage.appendChild(b);
+      svg.appendChild(el('line', { x1: cx + '%', y1: cy + '%', x2: lf.x + '%', y2: lf.y + '%' }));
+    });
+
+    var workHtml = A.work.map(function(w){
+      return '<li><a href="#' + w[0] + '">' + w[1] + '</a></li>';
+    }).join('');
+    var codeHtml = A.code.map(function(c){
+      return '<li><a href="#' + c[0] + '">' + c[1] + '</a></li>';
+    }).join('');
+
+    panel.innerHTML =
+      '<p class="panel-eyebrow">Research area</p>' +
+      '<h2>' + A.label + '</h2>' +
+      '<p class="desc">' + A.desc + '</p>' +
+      '<div class="panel-group"><h3>Selected work</h3><ul class="panel-list">' + workHtml + '</ul></div>' +
+      '<div class="panel-group"><h3>Related code</h3><ul class="panel-list">' + codeHtml + '</ul></div>';
+  }
+
+  if (overviewBtn) overviewBtn.addEventListener('click', renderOverview);
+  renderOverview();
 })();
 </script>
 
