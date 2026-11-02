@@ -200,6 +200,17 @@ section{padding:64px 0;}
 .proj-dl dd{margin:0; font-size:.95rem; line-height:1.45; color:var(--soft);}
 .proj-link{font-family:var(--sans); font-weight:600; font-size:13px; white-space:nowrap;}
 
+/* ---------- Pipeline: manuscripts under review ---------- */
+.pipe-list{margin:8px 0 0; padding:0; list-style:none; counter-reset:pipe;}
+.pipe{display:grid; grid-template-columns:36px minmax(0,1fr) auto; gap:4px 24px; padding:18px 0; border-top:1px solid var(--hair); counter-increment:pipe; scroll-margin-top:100px;}
+.pipe:first-child{border-top-color:var(--ink);}
+.pipe:target{background:rgba(72,83,140,.05);}
+.pipe::before{content:counter(pipe,decimal-leading-zero); grid-row:1 / span 2; font-family:var(--mono); font-size:13px; color:var(--faint); padding-top:3px;}
+.pipe-title{grid-column:2; font-size:1.02rem; line-height:1.4; color:var(--ink);}
+.pipe-auth{grid-column:2; font-family:var(--mono); font-size:12.5px; color:var(--soft);}
+.pipe-status{grid-column:3; grid-row:1; align-self:start; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--indigo); border:1px solid var(--indigo-soft); border-radius:2px; padding:3px 8px; white-space:nowrap;}
+@media (max-width:620px){.pipe{grid-template-columns:30px minmax(0,1fr);} .pipe-status{grid-column:2; grid-row:auto; justify-self:start; margin-top:6px;}}
+
 /* ---------- About ---------- */
 .about-grid{display:grid; grid-template-columns:1fr 220px; gap:40px; align-items:start;}
 .about-portrait{margin:0; background:var(--panel); padding:8px; border:1px solid var(--hair);}
@@ -283,7 +294,7 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
 @media print{
   :root{--cat-tray:#fff; --cat-page:#fff; --page:#fff;}
   body{background:#fff;}
-  nav,.skip,.intro,.network,#about,#recognition,#collaborate,#contact,footer,.tabs-row,.pub-note,.split > h2{display:none !important;}
+  nav,.skip,.intro,.network,#about,#recognition,#pipeline,#collaborate,#contact,footer,.tabs-row,.pub-note,.split > h2{display:none !important;}
   main,.wrap{display:block; max-width:none; padding:0;}
   .catalogue-zone{margin:0; padding:0;}
   #publications{display:block !important; padding:0; border:0;}
@@ -603,8 +614,51 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
       </div>
     </div></article>
 
+
+
+
+
+
+
   </div>
   </div>
+</section>
+
+<section id="pipeline" class="split">
+  <h2>In the pipeline</h2>
+  <p>Manuscripts submitted to peer-reviewed journals and currently under review.</p>
+  <ol class="pipe-list">
+    <li class="pipe" id="pipe-01">
+      <div class="pipe-title">Semantic evolution and citation dynamics in library user services research: a computational study (2015–2024)</div>
+      <div class="pipe-auth">K. Sumit, P. Buragohain, P. Tripathi, M. K. Singh, A. Lepcha</div>
+      <span class="pipe-status">Revised · awaiting decision</span>
+    </li>
+    <li class="pipe" id="pipe-02">
+      <div class="pipe-title">What keywords miss: a comparative analysis of bibliometric mapping and topic modeling in library and information science</div>
+      <div class="pipe-auth">K. Sumit, P. Buragohain, M. K. Singh, A. Rai</div>
+      <span class="pipe-status">With editor</span>
+    </li>
+    <li class="pipe" id="pipe-03">
+      <div class="pipe-title">Ethnic fermented foods in the digital arena: nostalgia, disgust, community monitoring, and cultural proximity in YouTube discourse</div>
+      <div class="pipe-auth">Y. Dev, K. Sumit, P. Buragohain, M. K. Singh, S. Kumar</div>
+      <span class="pipe-status">Under review</span>
+    </li>
+    <li class="pipe" id="pipe-04">
+      <div class="pipe-title">Does conceptual centrality pay off in citations everywhere? Topic-dependent evidence from library and information science</div>
+      <div class="pipe-auth">K. Sumit, M. K. Singh</div>
+      <span class="pipe-status">Under review</span>
+    </li>
+    <li class="pipe" id="pipe-05">
+      <div class="pipe-title">When meaning is not in the metadata: representational divergence in library discovery for a low-resource language</div>
+      <div class="pipe-auth">K. Sumit, M. K. Singh</div>
+      <span class="pipe-status">Under review</span>
+    </li>
+    <li class="pipe" id="pipe-06">
+      <div class="pipe-title">Beyond semantic similarity: bridging the Indigenous retrieval gap in multilingual digital libraries</div>
+      <div class="pipe-auth">K. Sumit, S. Mondal, S. Gangawat, M. K. Singh</div>
+      <span class="pipe-status">Under review</span>
+    </li>
+  </ol>
 </section>
 
 <section id="projects" class="split">
@@ -790,7 +844,9 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
              ['ks-2026-13','KS-13 — Semantic Workbench'],
              ['ks-2026-04','KS-04 — From keywords to connections'],
              ['ks-2026-11','KS-11 — Multilingual semantic OPAC module'],
-             ['ks-2026-09','KS-09 — From metadata to knowledge graphs']],
+             ['ks-2026-09','KS-09 — From metadata to knowledge graphs'],
+             ['pipe-06','Beyond semantic similarity (in review)'],
+             ['pipe-05','When meaning is not in the metadata (in review)']],
       code: [['proj-isrg','ISRG'], ['proj-rag','RAG_final'], ['proj-workbench','semanticwork_workbench']]
     },
     knowledge: {
@@ -822,7 +878,10 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
              ['ks-2026-02','KS-02 — Mapping health crisis research'],
              ['ks-2026-05','KS-05 — Sustainable agriculture discourse'],
              ['ks-2026-06','KS-06 — Indian knowledge systems, agriculture'],
-             ['ks-2026-07','KS-07 — Does open access matter for citations?']],
+             ['ks-2026-07','KS-07 — Does open access matter for citations?'],
+             ['pipe-04','Conceptual centrality and citations (in review)'],
+             ['pipe-02','What keywords miss (in review)'],
+             ['pipe-01','Library user services research (in review)']],
       code: [['proj-lda','lda-topicmodeling'], ['proj-sentiment','sentiment_analyser']]
     }
   };
