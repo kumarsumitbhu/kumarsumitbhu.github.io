@@ -205,8 +205,10 @@ section{padding:64px 0;}
 .pipe{display:grid; grid-template-columns:36px minmax(0,1fr) auto; gap:4px 24px; padding:18px 0; border-top:1px solid var(--hair); counter-increment:pipe; scroll-margin-top:100px;}
 .pipe:first-child{border-top-color:var(--ink);}
 .pipe:target{background:rgba(72,83,140,.05);}
-.pipe::before{content:counter(pipe,decimal-leading-zero); grid-row:1 / span 2; font-family:var(--mono); font-size:13px; color:var(--faint); padding-top:3px;}
+.pipe::before{content:counter(pipe,decimal-leading-zero); grid-row:1 / span 3; font-family:var(--mono); font-size:13px; color:var(--faint); padding-top:3px;}
 .pipe-title{grid-column:2; font-size:1.02rem; line-height:1.4; color:var(--ink);}
+.pipe-venue{grid-column:2; font-size:.92rem; color:var(--soft); margin-top:2px;}
+.pipe-q{display:inline-block; margin-left:10px; font-family:var(--mono); font-size:10.5px; font-weight:500; letter-spacing:.06em; color:#fff; background:var(--indigo); padding:1px 6px; border-radius:2px; vertical-align:2px;}
 .pipe-auth{grid-column:2; font-family:var(--mono); font-size:12.5px; color:var(--soft);}
 .pipe-status{grid-column:3; grid-row:1; align-self:start; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--indigo); border:1px solid var(--indigo-soft); border-radius:2px; padding:3px 8px; white-space:nowrap;}
 @media (max-width:620px){.pipe{grid-template-columns:30px minmax(0,1fr);} .pipe-status{grid-column:2; grid-row:auto; justify-self:start; margin-top:6px;}}
@@ -626,37 +628,43 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
 
 <section id="pipeline" class="split">
   <h2>In the pipeline</h2>
-  <p>Manuscripts submitted to peer-reviewed journals and currently under review.</p>
+  <p>Manuscripts under peer review, listed by journal standing (SCImago best quartile).</p>
   <ol class="pipe-list">
     <li class="pipe" id="pipe-01">
-      <div class="pipe-title">Semantic evolution and citation dynamics in library user services research: a computational study (2015–2024)</div>
-      <div class="pipe-auth">K. Sumit, P. Buragohain, P. Tripathi, M. K. Singh, A. Lepcha</div>
-      <span class="pipe-status">Revised · awaiting decision</span>
+      <div class="pipe-title">Does conceptual centrality pay off in citations everywhere? Topic-dependent evidence from library and information science</div>
+      <div class="pipe-auth">K. Sumit, M. K. Singh</div>
+      <div class="pipe-venue"><em>Scientometrics</em> · Springer<span class="pipe-q">Q1</span></div>
+      <span class="pipe-status">Under review</span>
     </li>
     <li class="pipe" id="pipe-02">
-      <div class="pipe-title">What keywords miss: a comparative analysis of bibliometric mapping and topic modeling in library and information science</div>
-      <div class="pipe-auth">K. Sumit, P. Buragohain, M. K. Singh, A. Rai</div>
-      <span class="pipe-status">With editor</span>
+      <div class="pipe-title">Beyond semantic similarity: bridging the Indigenous retrieval gap in multilingual digital libraries</div>
+      <div class="pipe-auth">K. Sumit, S. Mondal, S. Gangawat, M. K. Singh</div>
+      <div class="pipe-venue"><em>Journal of Information Science</em> · SAGE<span class="pipe-q">Q1</span></div>
+      <span class="pipe-status">Under review</span>
     </li>
     <li class="pipe" id="pipe-03">
-      <div class="pipe-title">Ethnic fermented foods in the digital arena: nostalgia, disgust, community monitoring, and cultural proximity in YouTube discourse</div>
-      <div class="pipe-auth">Y. Dev, K. Sumit, P. Buragohain, M. K. Singh, S. Kumar</div>
+      <div class="pipe-title">When meaning is not in the metadata: representational divergence in library discovery for a low-resource language</div>
+      <div class="pipe-auth">K. Sumit, M. K. Singh</div>
+      <div class="pipe-venue"><em>Library Hi Tech</em> · Emerald<span class="pipe-q">Q1</span></div>
       <span class="pipe-status">Under review</span>
     </li>
     <li class="pipe" id="pipe-04">
-      <div class="pipe-title">Does conceptual centrality pay off in citations everywhere? Topic-dependent evidence from library and information science</div>
-      <div class="pipe-auth">K. Sumit, M. K. Singh</div>
+      <div class="pipe-title">Ethnic fermented foods in the digital arena: nostalgia, disgust, community monitoring, and cultural proximity in YouTube discourse</div>
+      <div class="pipe-auth">Y. Dev, K. Sumit, P. Buragohain, M. K. Singh, S. Kumar</div>
+      <div class="pipe-venue"><em>Journal of Ethnic Foods</em> · BMC / Springer Nature<span class="pipe-q">Q1</span></div>
       <span class="pipe-status">Under review</span>
     </li>
     <li class="pipe" id="pipe-05">
-      <div class="pipe-title">When meaning is not in the metadata: representational divergence in library discovery for a low-resource language</div>
-      <div class="pipe-auth">K. Sumit, M. K. Singh</div>
-      <span class="pipe-status">Under review</span>
+      <div class="pipe-title">Semantic evolution and citation dynamics in library user services research: a computational study (2015–2024)</div>
+      <div class="pipe-auth">K. Sumit, P. Buragohain, P. Tripathi, M. K. Singh, A. Lepcha</div>
+      <div class="pipe-venue"><em>The Serials Librarian</em> · Taylor &amp; Francis</div>
+      <span class="pipe-status">Revised · awaiting decision</span>
     </li>
     <li class="pipe" id="pipe-06">
-      <div class="pipe-title">Beyond semantic similarity: bridging the Indigenous retrieval gap in multilingual digital libraries</div>
-      <div class="pipe-auth">K. Sumit, S. Mondal, S. Gangawat, M. K. Singh</div>
-      <span class="pipe-status">Under review</span>
+      <div class="pipe-title">What keywords miss: a comparative analysis of bibliometric mapping and topic modeling in library and information science</div>
+      <div class="pipe-auth">K. Sumit, P. Buragohain, M. K. Singh, A. Rai</div>
+      <div class="pipe-venue"><em>The Serials Librarian</em> · Taylor &amp; Francis</div>
+      <span class="pipe-status">With editor</span>
     </li>
   </ol>
 </section>
@@ -845,8 +853,8 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
              ['ks-2026-04','KS-04 — From keywords to connections'],
              ['ks-2026-11','KS-11 — Multilingual semantic OPAC module'],
              ['ks-2026-09','KS-09 — From metadata to knowledge graphs'],
-             ['pipe-06','Beyond semantic similarity (in review)'],
-             ['pipe-05','When meaning is not in the metadata (in review)']],
+             ['pipe-02','Beyond semantic similarity (in review)'],
+             ['pipe-03','When meaning is not in the metadata (in review)']],
       code: [['proj-isrg','ISRG'], ['proj-rag','RAG_final'], ['proj-workbench','semanticwork_workbench']]
     },
     knowledge: {
@@ -879,9 +887,9 @@ footer{border-top:1px solid var(--hair); padding:24px 0 40px;}
              ['ks-2026-05','KS-05 — Sustainable agriculture discourse'],
              ['ks-2026-06','KS-06 — Indian knowledge systems, agriculture'],
              ['ks-2026-07','KS-07 — Does open access matter for citations?'],
-             ['pipe-04','Conceptual centrality and citations (in review)'],
-             ['pipe-02','What keywords miss (in review)'],
-             ['pipe-01','Library user services research (in review)']],
+             ['pipe-01','Conceptual centrality and citations (in review)'],
+             ['pipe-06','What keywords miss (in review)'],
+             ['pipe-05','Library user services research (in review)']],
       code: [['proj-lda','lda-topicmodeling'], ['proj-sentiment','sentiment_analyser']]
     }
   };
